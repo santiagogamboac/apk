@@ -143,8 +143,12 @@ en el bytecode). La validación por etapa es:
 1. **Compila** (`./gradlew assembleDebug` sin errores).
 2. **Instala** en un emulador (AVD) o el dispositivo Android de Santiago vía `adb`.
 3. **Prueba manual** del flujo de esa etapa, cuando sea posible comparando lado a lado con
-   el APK original instalado (con un `applicationId` sufijado `.recovered` para poder
-   convivir ambos en el mismo dispositivo sin conflicto de firma/paquete).
+   el APK original. La comparación usa **dos dispositivos/emuladores separados** (uno con el
+   APK original, otro con el build recuperado) en vez de instalar ambos bajo un solo
+   `applicationId` sufijado `.recovered`: el Manifest recuperado conserva las authorities de
+   provider originales con valores fijos (p. ej. `com.tiviplay.tiviplaybox.ApkProvider`), que
+   colisionarían igual con las del APK original aunque el `applicationId` difiera, causando
+   `INSTALL_FAILED_CONFLICTING_PROVIDER`.
 
 Santiago necesita **Android Studio** instalado en su PC para abrir el proyecto, usar el
 emulador visual y depurar interactivamente; la compilación e instalación por línea de
@@ -168,7 +172,22 @@ comandos se puede hacer sin él, pero la experiencia completa de desarrollo la r
   documento.
 - El tiempo total depende de cuántas etapas requieran arreglos manuales extensos; se
   estructura por etapas justamente para poder pausar/reanudar y medir avance real.
+- **Resource shadowing por diseño de APKTool**: APKTool decodifica el `resources.arsc`
+  *completo*, incluyendo recursos que originalmente pertenecían a AARs de librerías
+  (AppCompat, Material, Leanback, ExoPlayer, Cast), no solo los recursos propios de la app.
+  Todo lo recuperado hacia `app/src/main/res/` queda ahí de forma permanente y **eclipsa** lo
+  que las dependencias de Gradle reales proveerían, porque los recursos del módulo `app`
+  siempre tienen prioridad sobre los de las librerías en el resource merging de Android.
+  Ejemplo concreto encontrado en la revisión final: el `res/values/integers.xml` recuperado
+  trae `google_play_services_version = 12451000` (Play Services ~12.4, mediados de 2018),
+  aunque el proyecto ahora depende de `play-services-ads:23.4.0` y
+  `play-services-cast-framework:22.1.0` (ambas muchísimo más nuevas) — este mismo tipo de
+  desajuste fue la causa del crash de AdMob por `APPLICATION_ID` que la Tarea 9 tuvo que
+  resolver. Cada etapa futura que toque `attrs.xml`/`public.xml` tendrá que mantenerlos
+  sincronizados al borrar entradas duplicadas de librerías (como ya tuvo que hacer la Tarea
+  8 una vez). Es una propiedad inherente al enfoque de recuperación basado en APKTool, no
+  algo resoluble dentro de Stage 0.
 
 ## Progress log
 
-- 2026-09-14: Stage 0 (compiling, installable skeleton) complete. `assembleDebug` succeeds, `SplashActivity` stub installs and launches without crashing. Minor fix applied: added missing Google Mobile Ads (AdMob) APPLICATION_ID metadata to AndroidManifest.xml (test app ID: ca-app-pub-3940256099942544~3347511713) to prevent initialization failure. No proprietary logic recovered yet - see the Stage 1 plan for the data layer.
+- 2026-09-14: Stage 0 (compiling, installable skeleton) complete. `assembleDebug` succeeds, `SplashActivity` stub installs and launches without crashing. Minor fix applied: the original app never declared a Google Mobile Ads (AdMob) `APPLICATION_ID` meta-data at all (confirmed: zero occurrences in the un-pruned original manifest backup) - it only had `AD_MANAGER_APP=true`, consistent with predating play-services-ads 17.0.0's enforcement of this field. Added a synthetic Stage-0 placeholder `APPLICATION_ID` (Google's public AdMob test ID: ca-app-pub-3940256099942544~3347511713) to AndroidManifest.xml to prevent initialization failure with the current, much newer play-services-ads dependency - this is a new addition, not something restored from the original app. No proprietary logic recovered yet - see the Stage 1 plan for the data layer.

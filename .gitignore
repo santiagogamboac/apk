@@ -16,3 +16,6 @@
 /recovery/apktool-out/original/
 /recovery/apktool-out/unknown/
 /recovery/apktool-out/apktool.yml
+
+# JADX decompilation output: regenerable artifact
+/recovery/jadx-out/

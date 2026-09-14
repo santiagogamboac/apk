@@ -1,0 +1,355 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="35" android:compileSdkVersionCodename="15" package="com.tiviplay.tiviplaybox" platformBuildVersionCode="35" platformBuildVersionName="15">
+    <queries>
+        <intent>
+            <action android:name="android.speech.action.RECOGNIZE_SPEECH" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="https" />
+        </intent>
+        <package android:name="com.google.android.gms.policy_cast_dynamite" />
+        <intent>
+            <action android:name="com.android.vending.billing.InAppBillingService.BIND" />
+        </intent>
+    </queries>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_OWNER_DATA" />
+    <uses-permission android:name="android.permission.WRITE_OWNER_DATA" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true" />
+    <uses-feature android:name="android.hardware.microphone" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+    <uses-feature android:name="android.software.leanback" android:required="false" />
+    <uses-feature android:name="android.hardware.screen.portrait" android:required="false" />
+    <permission android:name="com.tiviplay.tiviplaybox.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.tiviplay.tiviplaybox.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" />
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" />
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" />
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" />
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_APP_BADGE" />
+    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ" />
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.front" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false" />
+    <uses-feature android:name="android.hardware.screen.landscape" android:required="false" />
+    <uses-feature android:name="android.hardware.wifi" android:required="false" />
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+    <permission android:name="com.tiviplay.tiviplaybox.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature" />
+    <uses-permission android:name="com.tiviplay.tiviplaybox.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+    <application android:allowBackup="false" android:allowNativeHeapPointerTagging="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:banner="@mipmap/tv_banner" android:extractNativeLibs="true" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:largeHeap="true" android:name="com.tiviplay.tiviplaybox.miscelleneious.MyApplication" android:requestLegacyExternalStorage="true" android:supportsRtl="true" android:theme="@style/AppTheme.NoActionBar" android:usesCleartextTraffic="true">
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.OpensubtitleActivity" android:screenOrientation="sensorLandscape">
+            <meta-data android:name="android.app.lib_name" android:value="" />
+        </activity>
+        <activity android:exported="false" android:name="com.tiviplay.tiviplaybox.MainActivity2">
+            <meta-data android:name="android.app.lib_name" android:value="" />
+        </activity>
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.LoginActivityStalker" android:screenOrientation="landscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.ImportStalkerActivity" android:screenOrientation="landscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.ImportOneStreamActivity" android:screenOrientation="landscape" />
+        <uses-library android:name="org.apache.http.legacy" android:required="false" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.Local_media_Activity" android:screenOrientation="landscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.AudioPickActivity" android:screenOrientation="portrait" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.VideoPickActivity" android:screenOrientation="portrait" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.SpeedTestActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.MultiSettingActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.FirebaseRegisterDeviceActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.SmallCaptureActivity" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.ToolbarCaptureActivity" android:screenOrientation="sensorPortrait" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.ActivateOnTVActivity" android:screenOrientation="sensorLandscape" android:windowSoftInputMode="stateAlwaysHidden" />
+        <provider android:authorities="com.tiviplay.tiviplaybox.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.tiviplay.tiviplaybox.miscelleneious.VedioFile">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_path" />
+        </provider>
+        <provider android:authorities="com.tiviplay.tiviplaybox.ApkProvider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths_apk" />
+        </provider>
+        <provider android:authorities="com.tiviplay.tiviplaybox.ApkProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.tiviplay.tiviplaybox.miscelleneious.VedioFile">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_path" />
+        </provider>
+        <provider android:authorities="com.tiviplay.tiviplaybox.fileprovider" android:enabled="true" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths" />
+        </provider>
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.AddedExternalPlayerActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.ExternalPlayerActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.SplashActivity" android:screenOrientation="sensorLandscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.SubtitleActivity" android:screenOrientation="sensorLandscape" android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.LoginActivityOneStream" android:screenOrientation="sensorLandscape" android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.LoginActivity" android:screenOrientation="sensorLandscape" android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.SettingsActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.ParentalControlActivitity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:enableOnBackInvokedCallback="true" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.NewDashboardActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.AccountInfoActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.PlayerSelectionActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.ImportEPGActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.NewEPGActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.NewEPGCategoriesActivity" android:screenOrientation="sensorLandscape" android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.ViewDetailsActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.ViewDetailsCastActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.PlayRecordingExternalPlayerActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.StreamFormatActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.TVArchiveActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.SubTVArchiveActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.VodActivityNewFlowSubCategories" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.VodActivityNewFlowSecondSubCategories" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.LiveActivityNewFlow" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.TVArchiveActivityNewFlow" android:screenOrientation="sensorLandscape" android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.TVArchiveActivityLayout" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.TimeFormatActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.EPGChannelUpdateActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.VodActivityNewFlow" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.VodActivityLayout" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.AutomationActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.SeriesActivtyNewFlow" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.SeriesActivitNewFlowSubCat" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.GeneralSettingsActivity" android:screenOrientation="sensorLandscape" />
+        <receiver android:enabled="true" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.BootStartupActivity" android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.YouTubePlayerActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.NotificationActivity" android:screenOrientation="sensorLandscape" android:taskAffinity="" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.RecordingActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.MxPlayerRecordingActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.AnnouncementsActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.AnnouncementAlertActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:launchMode="singleTask" android:name="com.tiviplay.tiviplaybox.view.ijkplayer.activities.NSTIJKPlayerSkyActivity" android:resizeableActivity="false" android:screenOrientation="sensorLandscape" android:supportsPictureInPicture="true" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.ijkplayer.activities.NSTIJKPlayerVODActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.ijkplayer.activities.NSTIJKPlayerEPGActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.PlayerSettingsActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.CheckAppupdateActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.RateUsActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.billingClientApp.activities.FreeTrailActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.ImportM3uActivity" android:screenOrientation="sensorLandscape">
+            <intent-filter>
+                <action android:name="redirect_live_tv" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="redirect_vod" />
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.RoutingActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.LoginM3uActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.MultiUserActivity" android:screenOrientation="sensorLandscape">
+            <intent-filter>
+                <action android:name="m3u" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="api" />
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.ViewDetailsTMDBActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.SeriesDetailM3UActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.SeriesActivityNewFlowSubCategoriesM3U" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.SeriesActivityNewFlowM3U" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.PlayExternalPlayerActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.billingClientApp.activities.ServicesDashboardActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.billingClientApp.activities.MySerivcesActiviy" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.billingClientApp.activities.MyTicketActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.billingClientApp.activities.MyInvoiceActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.billingClientApp.activities.ViewTicketActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.billingClientApp.activities.PaidInvoiceActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.billingClientApp.activities.UnpiadInvoiceActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.billingClientApp.activities.CancelInvoiceActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.billingClientApp.activities.InvoiceRefundedActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.billingClientApp.activities.ActiveServiceActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.billingClientApp.activities.CancelledSerivceActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.billingClientApp.activities.PendingServiceActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.billingClientApp.activities.SuspendedServiceActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.billingClientApp.activities.TerminatedServiceActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.billingClientApp.activities.FraudServiceActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.billingClientApp.activities.ShowserviceInformationActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.billingClientApp.activities.OpenTicketActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.billingClientApp.activities.InvoicePaidDetailActivity" android:screenOrientation="sensorLandscape" />
+        <service android:exported="true" android:foregroundServiceType="remoteMessaging" android:name="com.tiviplay.tiviplaybox.billingClientApp.notifications.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:foregroundServiceType="remoteMessaging" android:name="com.tiviplay.tiviplaybox.billingClientApp.notifications.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_channel_id" android:value="@string/default_notification_channel_id" />
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.billingClientApp.activities.BuyNowActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:exported="true" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.tiviplay.tiviplaybox.miscelleneious.chromecastfeature.ExpandedControlsActivity" android:screenOrientation="sensorLandscape" android:theme="@style/ChromecastTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.tiviplay.tiviplaybox.view.activity.NewDashboardActivity" />
+        </activity>
+        <meta-data android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME" android:value="com.tiviplay.tiviplaybox.miscelleneious.chromecastfeature.CastOptionsProvider" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.ijkplayer.activities.NSTIJKPlayerMultiActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.vpn.activities.ProfileActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.vpn.activities.ImportVPNActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.vpn.LogWindow" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.vpn.DisconnectVPN" android:screenOrientation="sensorLandscape" />
+        <meta-data android:name="android.content.APP_RESTRICTIONS" android:resource="@xml/app_restrictions" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.SeriesDetailActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:launchMode="singleTask" android:name="com.tiviplay.tiviplaybox.view.activity.HoneyPlayer" android:resizeableActivity="false" android:screenOrientation="sensorLandscape" android:supportsPictureInPicture="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="content" />
+                <data android:mimeType="video/*" />
+                <data android:mimeType="audio/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="content" />
+                <data android:mimeType="video/*" />
+                <data android:mimeType="audio/*" />
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.miscelleneious.chromecastfeature.queue.QueueListViewActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.SeriesAllDataSingleActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.VodAllDataSingleActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.LiveAllDataSingleActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="orientation|screenLayout|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.ijkplayer.activities.NSTIJKPlayerSkyTvActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.SearchActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.FrontView" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.EPGSettingsActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.SearchActivityLowerSDK" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.ScreenTypeActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.ScreenTypeSettingsActivity" android:screenOrientation="sensorLandscape" />
+        <service android:exported="true" android:foregroundServiceType="mediaPlayback" android:name="com.tiviplay.tiviplaybox.miscelleneious.chromecastfeature.castserver.CastServerService" />
+        <service android:exported="true" android:name="com.tiviplay.tiviplaybox.miscelleneious.StopProcessingTasksService" android:stopWithTask="false" />
+        <activity android:configChanges="keyboardHidden" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.demo.SampleChooserActivity" android:theme="@style/Theme.AppCompat">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" />
+                <data android:host="*" />
+                <data android:pathPattern=".*\\.exolist\\.json" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https" />
+                <data android:host="*" />
+                <data android:pathPattern=".*\\.exolist\\.json" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="content" />
+                <data android:host="*" />
+                <data android:pathPattern=".*\\.exolist\\.json" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="asset" />
+                <data android:host="*" />
+                <data android:pathPattern=".*\\.exolist\\.json" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="file" />
+                <data android:host="*" />
+                <data android:pathPattern=".*\\.exolist\\.json" />
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:exported="true" android:launchMode="singleTop" android:name="com.tiviplay.tiviplaybox.view.demo.PlayerActivity" android:theme="@style/Theme.AppCompat">
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:scheme="content" />
+                <data android:scheme="asset" />
+                <data android:scheme="file" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW_LIST" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.ExoPlayerMoviesSeriesActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:launchMode="singleTask" android:name="com.tiviplay.tiviplaybox.view.demo.NSTEXOPlayerSkyActivity" android:resizeableActivity="false" android:screenOrientation="sensorLandscape" android:supportsPictureInPicture="true" />
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:launchMode="singleTask" android:name="com.tiviplay.tiviplaybox.view.demo.NSTEXOPlayerSkyTvActivity" android:resizeableActivity="false" android:screenOrientation="sensorLandscape" android:supportsPictureInPicture="true" />
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.DownloadedMovies" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.demo.ExoDownloadedPlayerTwo" android:screenOrientation="sensorLandscape" />
+        <service android:exported="false" android:foregroundServiceType="mediaPlayback" android:name="com.tiviplay.tiviplaybox.view.services.VideoDownloadService" android:permission="android.permission.FOREGROUND_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.downloadService.action.RESTART" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:launchMode="singleTask" android:name="com.tiviplay.tiviplaybox.view.activity.ExoPlayerMoviesSeries" android:resizeableActivity="false" android:screenOrientation="sensorLandscape" android:supportsPictureInPicture="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="content" />
+                <data android:mimeType="video/*" />
+                <data android:mimeType="audio/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="content" />
+                <data android:mimeType="video/*" />
+                <data android:mimeType="audio/*" />
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.sbpfunction.activitypushnotification.SBPAnnouncementsActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.sbpfunction.activitypushnotification.NotificationPanelActivtiy" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.PrivacyPolicyActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.sbpfunction.activitypushnotification.MaintanencePannelActivity" android:screenOrientation="sensorLandscape" />
+        <meta-data android:name="com.google.android.gms.ads.AD_MANAGER_APP" android:value="true" />
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+        <meta-data android:name="com.google.android.play.billingclient.version" android:value="7.0.0" />
+        <uses-library android:name="androidx.window.extensions" android:required="false" />
+        <uses-library android:name="androidx.window.sidecar" android:required="false" />
+        </application>
+</manifest>

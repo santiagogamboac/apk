@@ -95,6 +95,12 @@
         <provider android:authorities="com.tiviplay.tiviplaybox.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.tiviplay.tiviplaybox.miscelleneious.VedioFile">
             <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_path" />
         </provider>
+        <!-- STAGE0-NOTE: these next two providers share the authority "com.tiviplay.tiviplaybox.ApkProvider"
+             on purpose - this is a pre-existing duplicate authority from the ORIGINAL app, confirmed
+             present identically in recovery/apktool-out/AndroidManifest.full.xml.bak (the un-pruned
+             backup of the original app's manifest). It is not something the recovery/pruning scripts
+             introduced or a bug in them - do not "fix" this without also verifying against the original
+             app's runtime behavior first. -->
         <provider android:authorities="com.tiviplay.tiviplaybox.ApkProvider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
             <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths_apk" />
         </provider>

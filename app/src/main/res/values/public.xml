@@ -216,13 +216,11 @@
     <public type="attr" name="allowDividerBelow" id="0x7f040038" />
     <public type="attr" name="allowStacking" id="0x7f040039" />
     <public type="attr" name="alpha" id="0x7f04003a" />
-    <public type="attr" name="alphabeticModifiers" id="0x7f04003b" />
     <public type="attr" name="altSrc" id="0x7f04003c" />
     <public type="attr" name="alwaysExpand" id="0x7f04003d" />
     <public type="attr" name="animateMenuItems" id="0x7f04003e" />
     <public type="attr" name="animateNavigationIcon" id="0x7f04003f" />
     <public type="attr" name="animate_relativeTo" id="0x7f040040" />
-    <public type="attr" name="animationMode" id="0x7f040041" />
     <public type="attr" name="animation_enabled" id="0x7f040042" />
     <public type="attr" name="appBarLayoutStyle" id="0x7f040043" />
     <public type="attr" name="applyMotionScene" id="0x7f040044" />
@@ -243,7 +241,6 @@
     <public type="attr" name="autoSizePresetSizes" id="0x7f040053" />
     <public type="attr" name="autoSizeStepGranularity" id="0x7f040054" />
     <public type="attr" name="autoSizeTextType" id="0x7f040055" />
-    <public type="attr" name="autoTransition" id="0x7f040056" />
     <public type="attr" name="auto_show" id="0x7f040057" />
     <public type="attr" name="backHandlingEnabled" id="0x7f040058" />
     <public type="attr" name="background" id="0x7f040059" />
@@ -256,8 +253,6 @@
     <public type="attr" name="backgroundSplit" id="0x7f040060" />
     <public type="attr" name="backgroundStacked" id="0x7f040061" />
     <public type="attr" name="backgroundTint" id="0x7f040062" />
-    <public type="attr" name="backgroundTintMode" id="0x7f040063" />
-    <public type="attr" name="badgeGravity" id="0x7f040064" />
     <public type="attr" name="badgeHeight" id="0x7f040065" />
     <public type="attr" name="badgeRadius" id="0x7f040066" />
     <public type="attr" name="badgeShapeAppearance" id="0x7f040067" />
@@ -289,8 +284,6 @@
     <public type="attr" name="behavior_halfExpandedRatio" id="0x7f040081" />
     <public type="attr" name="behavior_hideable" id="0x7f040082" />
     <public type="attr" name="behavior_overlapTop" id="0x7f040083" />
-    <public type="attr" name="behavior_peekHeight" id="0x7f040084" />
-    <public type="attr" name="behavior_saveFlags" id="0x7f040085" />
     <public type="attr" name="behavior_significantVelocityThreshold" id="0x7f040086" />
     <public type="attr" name="behavior_skipCollapsed" id="0x7f040087" />
     <public type="attr" name="borderWidth" id="0x7f040088" />
@@ -302,7 +295,6 @@
     <public type="attr" name="bottomSheetDragHandleStyle" id="0x7f04008e" />
     <public type="attr" name="bottomSheetStyle" id="0x7f04008f" />
     <public type="attr" name="boxBackgroundColor" id="0x7f040090" />
-    <public type="attr" name="boxBackgroundMode" id="0x7f040091" />
     <public type="attr" name="boxCollapsedPaddingTop" id="0x7f040092" />
     <public type="attr" name="boxCornerRadiusBottomEnd" id="0x7f040093" />
     <public type="attr" name="boxCornerRadiusBottomStart" id="0x7f040094" />
@@ -331,13 +323,10 @@
     <public type="attr" name="buttonBarPositiveButtonStyle" id="0x7f0400ab" />
     <public type="attr" name="buttonBarStyle" id="0x7f0400ac" />
     <public type="attr" name="buttonCompat" id="0x7f0400ad" />
-    <public type="attr" name="buttonGravity" id="0x7f0400ae" />
     <public type="attr" name="buttonIcon" id="0x7f0400af" />
     <public type="attr" name="buttonIconDimen" id="0x7f0400b0" />
     <public type="attr" name="buttonIconTint" id="0x7f0400b1" />
-    <public type="attr" name="buttonIconTintMode" id="0x7f0400b2" />
     <public type="attr" name="buttonPanelSideLayout" id="0x7f0400b3" />
-    <public type="attr" name="buttonSize" id="0x7f0400b4" />
     <public type="attr" name="buttonStyle" id="0x7f0400b5" />
     <public type="attr" name="buttonStyleSmall" id="0x7f0400b6" />
     <public type="attr" name="buttonTint" id="0x7f0400b7" />
@@ -350,10 +339,8 @@
     <public type="attr" name="cardForegroundColor" id="0x7f0400be" />
     <public type="attr" name="cardMaxElevation" id="0x7f0400bf" />
     <public type="attr" name="cardPreventCornerOverlap" id="0x7f0400c0" />
-    <public type="attr" name="cardType" id="0x7f0400c1" />
     <public type="attr" name="cardUseCompatPadding" id="0x7f0400c2" />
     <public type="attr" name="cardViewStyle" id="0x7f0400c3" />
-    <public type="attr" name="carousel_alignment" id="0x7f0400c4" />
     <public type="attr" name="castAdBreakMarkerColor" id="0x7f0400c5" />
     <public type="attr" name="castAdInProgressLabelTextAppearance" id="0x7f0400c6" />
     <public type="attr" name="castAdInProgressText" id="0x7f0400c7" />
@@ -413,12 +400,10 @@
     <public type="attr" name="checkedChip" id="0x7f0400fd" />
     <public type="attr" name="checkedIcon" id="0x7f0400fe" />
     <public type="attr" name="checkedIconEnabled" id="0x7f0400ff" />
-    <public type="attr" name="checkedIconGravity" id="0x7f040100" />
     <public type="attr" name="checkedIconMargin" id="0x7f040101" />
     <public type="attr" name="checkedIconSize" id="0x7f040102" />
     <public type="attr" name="checkedIconTint" id="0x7f040103" />
     <public type="attr" name="checkedIconVisible" id="0x7f040104" />
-    <public type="attr" name="checkedState" id="0x7f040105" />
     <public type="attr" name="checkedTextViewStyle" id="0x7f040106" />
     <public type="attr" name="chipBackgroundColor" id="0x7f040107" />
     <public type="attr" name="chipCornerRadius" id="0x7f040108" />
@@ -448,7 +433,6 @@
     <public type="attr" name="civ_border_width" id="0x7f040120" />
     <public type="attr" name="civ_fill_color" id="0x7f040121" />
     <public type="attr" name="clearTop" id="0x7f040122" />
-    <public type="attr" name="clickAction" id="0x7f040123" />
     <public type="attr" name="clockFaceBackgroundColor" id="0x7f040124" />
     <public type="attr" name="clockHandColor" id="0x7f040125" />
     <public type="attr" name="clockIcon" id="0x7f040126" />
@@ -465,7 +449,6 @@
     <public type="attr" name="collapseContentDescription" id="0x7f040131" />
     <public type="attr" name="collapseIcon" id="0x7f040132" />
     <public type="attr" name="collapsedSize" id="0x7f040133" />
-    <public type="attr" name="collapsedTitleGravity" id="0x7f040134" />
     <public type="attr" name="collapsedTitleTextAppearance" id="0x7f040135" />
     <public type="attr" name="collapsedTitleTextColor" id="0x7f040136" />
     <public type="attr" name="collapsingToolbarLayoutLargeSize" id="0x7f040137" />
@@ -514,7 +497,6 @@
     <public type="attr" name="colorPrimaryInverse" id="0x7f040162" />
     <public type="attr" name="colorPrimarySurface" id="0x7f040163" />
     <public type="attr" name="colorPrimaryVariant" id="0x7f040164" />
-    <public type="attr" name="colorScheme" id="0x7f040165" />
     <public type="attr" name="colorSecondary" id="0x7f040166" />
     <public type="attr" name="colorSecondaryContainer" id="0x7f040167" />
     <public type="attr" name="colorSecondaryFixed" id="0x7f040168" />
@@ -535,7 +517,6 @@
     <public type="attr" name="colorTertiaryContainer" id="0x7f040177" />
     <public type="attr" name="colorTertiaryFixed" id="0x7f040178" />
     <public type="attr" name="colorTertiaryFixedDim" id="0x7f040179" />
-    <public type="attr" name="columnWidth" id="0x7f04017a" />
     <public type="attr" name="commitIcon" id="0x7f04017b" />
     <public type="attr" name="compatShadowEnabled" id="0x7f04017c" />
     <public type="attr" name="constraintSet" id="0x7f04017d" />
@@ -564,11 +545,6 @@
     <public type="attr" name="controller_layout_id" id="0x7f040194" />
     <public type="attr" name="coordinatorLayoutStyle" id="0x7f040195" />
     <public type="attr" name="coplanarSiblingViewId" id="0x7f040196" />
-    <public type="attr" name="cornerFamily" id="0x7f040197" />
-    <public type="attr" name="cornerFamilyBottomLeft" id="0x7f040198" />
-    <public type="attr" name="cornerFamilyBottomRight" id="0x7f040199" />
-    <public type="attr" name="cornerFamilyTopLeft" id="0x7f04019a" />
-    <public type="attr" name="cornerFamilyTopRight" id="0x7f04019b" />
     <public type="attr" name="cornerRadius" id="0x7f04019c" />
     <public type="attr" name="cornerSize" id="0x7f04019d" />
     <public type="attr" name="cornerSizeBottomLeft" id="0x7f04019e" />
@@ -696,10 +672,7 @@
     <public type="attr" name="endIconContentDescription" id="0x7f040218" />
     <public type="attr" name="endIconDrawable" id="0x7f040219" />
     <public type="attr" name="endIconMinSize" id="0x7f04021a" />
-    <public type="attr" name="endIconMode" id="0x7f04021b" />
-    <public type="attr" name="endIconScaleType" id="0x7f04021c" />
     <public type="attr" name="endIconTint" id="0x7f04021d" />
-    <public type="attr" name="endIconTintMode" id="0x7f04021e" />
     <public type="attr" name="enforceMaterialTheme" id="0x7f04021f" />
     <public type="attr" name="enforceTextAppearance" id="0x7f040220" />
     <public type="attr" name="ensureMinTouchTargetSize" id="0x7f040221" />
@@ -712,7 +685,6 @@
     <public type="attr" name="errorEnabled" id="0x7f040228" />
     <public type="attr" name="errorIconDrawable" id="0x7f040229" />
     <public type="attr" name="errorIconTint" id="0x7f04022a" />
-    <public type="attr" name="errorIconTintMode" id="0x7f04022b" />
     <public type="attr" name="errorMessageStyle" id="0x7f04022c" />
     <public type="attr" name="errorShown" id="0x7f04022d" />
     <public type="attr" name="errorTextAppearance" id="0x7f04022e" />
@@ -720,7 +692,6 @@
     <public type="attr" name="expandActivityOverflowButtonDrawable" id="0x7f040230" />
     <public type="attr" name="expanded" id="0x7f040231" />
     <public type="attr" name="expandedHintEnabled" id="0x7f040232" />
-    <public type="attr" name="expandedTitleGravity" id="0x7f040233" />
     <public type="attr" name="expandedTitleMargin" id="0x7f040234" />
     <public type="attr" name="expandedTitleMarginBottom" id="0x7f040235" />
     <public type="attr" name="expandedTitleMarginEnd" id="0x7f040236" />
@@ -729,7 +700,6 @@
     <public type="attr" name="expandedTitleTextAppearance" id="0x7f040239" />
     <public type="attr" name="expandedTitleTextColor" id="0x7f04023a" />
     <public type="attr" name="extendMotionSpec" id="0x7f04023b" />
-    <public type="attr" name="extendStrategy" id="0x7f04023c" />
     <public type="attr" name="extendedFloatingActionButtonPrimaryStyle" id="0x7f04023d" />
     <public type="attr" name="extendedFloatingActionButtonSecondaryStyle" id="0x7f04023e" />
     <public type="attr" name="extendedFloatingActionButtonStyle" id="0x7f04023f" />
@@ -738,16 +708,11 @@
     <public type="attr" name="externalRouteEnabledDrawable" id="0x7f040242" />
     <public type="attr" name="externalRouteEnabledDrawableStatic" id="0x7f040243" />
     <public type="attr" name="extraMultilineHeightEnabled" id="0x7f040244" />
-    <public type="attr" name="extraVisibility" id="0x7f040245" />
-    <public type="attr" name="fabAlignmentMode" id="0x7f040246" />
     <public type="attr" name="fabAlignmentModeEndMargin" id="0x7f040247" />
-    <public type="attr" name="fabAnchorMode" id="0x7f040248" />
-    <public type="attr" name="fabAnimationMode" id="0x7f040249" />
     <public type="attr" name="fabCradleMargin" id="0x7f04024a" />
     <public type="attr" name="fabCradleRoundedCornerRadius" id="0x7f04024b" />
     <public type="attr" name="fabCradleVerticalOffset" id="0x7f04024c" />
     <public type="attr" name="fabCustomSize" id="0x7f04024d" />
-    <public type="attr" name="fabSize" id="0x7f04024e" />
     <public type="attr" name="fastScrollEnabled" id="0x7f04024f" />
     <public type="attr" name="fastScrollHorizontalThumbDrawable" id="0x7f040250" />
     <public type="attr" name="fastScrollHorizontalTrackDrawable" id="0x7f040251" />
@@ -809,12 +774,9 @@
     <public type="attr" name="fontFamily" id="0x7f040289" />
     <public type="attr" name="fontProviderAuthority" id="0x7f04028a" />
     <public type="attr" name="fontProviderCerts" id="0x7f04028b" />
-    <public type="attr" name="fontProviderFetchStrategy" id="0x7f04028c" />
-    <public type="attr" name="fontProviderFetchTimeout" id="0x7f04028d" />
     <public type="attr" name="fontProviderPackage" id="0x7f04028e" />
     <public type="attr" name="fontProviderQuery" id="0x7f04028f" />
     <public type="attr" name="fontProviderSystemFontFamily" id="0x7f040290" />
-    <public type="attr" name="fontStyle" id="0x7f040291" />
     <public type="attr" name="fontVariationSettings" id="0x7f040292" />
     <public type="attr" name="fontWeight" id="0x7f040293" />
     <public type="attr" name="forceApplySystemWindowInsetTop" id="0x7f040294" />
@@ -889,7 +851,6 @@
     <public type="attr" name="helperTextEnabled" id="0x7f0402d9" />
     <public type="attr" name="helperTextTextAppearance" id="0x7f0402da" />
     <public type="attr" name="helperTextTextColor" id="0x7f0402db" />
-    <public type="attr" name="hideAnimationBehavior" id="0x7f0402dc" />
     <public type="attr" name="hideLineWhenFilled" id="0x7f0402dd" />
     <public type="attr" name="hideMotionSpec" id="0x7f0402de" />
     <public type="attr" name="hideNavigationIcon" id="0x7f0402df" />
@@ -910,16 +871,13 @@
     <public type="attr" name="hoveredFocusedTranslationZ" id="0x7f0402ee" />
     <public type="attr" name="icon" id="0x7f0402ef" />
     <public type="attr" name="iconEndPadding" id="0x7f0402f0" />
-    <public type="attr" name="iconGravity" id="0x7f0402f1" />
     <public type="attr" name="iconPadding" id="0x7f0402f2" />
     <public type="attr" name="iconSize" id="0x7f0402f3" />
     <public type="attr" name="iconSpaceReserved" id="0x7f0402f4" />
     <public type="attr" name="iconStartPadding" id="0x7f0402f5" />
     <public type="attr" name="iconTint" id="0x7f0402f6" />
-    <public type="attr" name="iconTintMode" id="0x7f0402f7" />
     <public type="attr" name="iconifiedByDefault" id="0x7f0402f8" />
     <public type="attr" name="imageAspectRatio" id="0x7f0402f9" />
-    <public type="attr" name="imageAspectRatioAdjust" id="0x7f0402fa" />
     <public type="attr" name="imageButtonStyle" id="0x7f0402fb" />
     <public type="attr" name="imageCardViewBadgeStyle" id="0x7f0402fc" />
     <public type="attr" name="imageCardViewContentStyle" id="0x7f0402fd" />
@@ -927,17 +885,13 @@
     <public type="attr" name="imageCardViewInfoAreaStyle" id="0x7f0402ff" />
     <public type="attr" name="imageCardViewStyle" id="0x7f040300" />
     <public type="attr" name="imageCardViewTitleStyle" id="0x7f040301" />
-    <public type="attr" name="indeterminateAnimationType" id="0x7f040302" />
     <public type="attr" name="indeterminateProgressStyle" id="0x7f040303" />
     <public type="attr" name="indicatorColor" id="0x7f040304" />
-    <public type="attr" name="indicatorDirectionCircular" id="0x7f040305" />
-    <public type="attr" name="indicatorDirectionLinear" id="0x7f040306" />
     <public type="attr" name="indicatorInset" id="0x7f040307" />
     <public type="attr" name="indicatorName" id="0x7f040308" />
     <public type="attr" name="indicatorSize" id="0x7f040309" />
     <public type="attr" name="indicatorTrackGapSize" id="0x7f04030a" />
     <public type="attr" name="infoAreaBackground" id="0x7f04030b" />
-    <public type="attr" name="infoVisibility" id="0x7f04030c" />
     <public type="attr" name="initialActivityCount" id="0x7f04030d" />
     <public type="attr" name="initialExpandedChildrenCount" id="0x7f04030e" />
     <public type="attr" name="insetForeground" id="0x7f04030f" />
@@ -986,13 +940,10 @@
     <public type="attr" name="justifyContent" id="0x7f04033a" />
     <public type="attr" name="keep_content_on_player_reset" id="0x7f04033b" />
     <public type="attr" name="key" id="0x7f04033c" />
-    <public type="attr" name="keyPositionType" id="0x7f04033d" />
     <public type="attr" name="keyboardIcon" id="0x7f04033e" />
     <public type="attr" name="keylines" id="0x7f04033f" />
     <public type="attr" name="lStar" id="0x7f040340" />
-    <public type="attr" name="labelBehavior" id="0x7f040341" />
     <public type="attr" name="labelStyle" id="0x7f040342" />
-    <public type="attr" name="labelVisibilityMode" id="0x7f040343" />
     <public type="attr" name="largeFontVerticalOffsetAdjustment" id="0x7f040344" />
     <public type="attr" name="lastBaselineToBottomHeight" id="0x7f040345" />
     <public type="attr" name="lastItemDecorated" id="0x7f040346" />
@@ -1004,7 +955,6 @@
     <public type="attr" name="layout_anchor" id="0x7f04034c" />
     <public type="attr" name="layout_anchorGravity" id="0x7f04034d" />
     <public type="attr" name="layout_behavior" id="0x7f04034e" />
-    <public type="attr" name="layout_collapseMode" id="0x7f04034f" />
     <public type="attr" name="layout_collapseParallaxMultiplier" id="0x7f040350" />
     <public type="attr" name="layout_constrainedHeight" id="0x7f040351" />
     <public type="attr" name="layout_constrainedWidth" id="0x7f040352" />
@@ -1048,7 +998,6 @@
     <public type="attr" name="layout_constraintWidth_max" id="0x7f040378" />
     <public type="attr" name="layout_constraintWidth_min" id="0x7f040379" />
     <public type="attr" name="layout_constraintWidth_percent" id="0x7f04037a" />
-    <public type="attr" name="layout_dodgeInsetEdges" id="0x7f04037b" />
     <public type="attr" name="layout_editor_absoluteX" id="0x7f04037c" />
     <public type="attr" name="layout_editor_absoluteY" id="0x7f04037d" />
     <public type="attr" name="layout_flexBasisPercent" id="0x7f04037e" />
@@ -1060,7 +1009,6 @@
     <public type="attr" name="layout_goneMarginRight" id="0x7f040384" />
     <public type="attr" name="layout_goneMarginStart" id="0x7f040385" />
     <public type="attr" name="layout_goneMarginTop" id="0x7f040386" />
-    <public type="attr" name="layout_insetEdge" id="0x7f040387" />
     <public type="attr" name="layout_keyline" id="0x7f040388" />
     <public type="attr" name="layout_maxHeight" id="0x7f040389" />
     <public type="attr" name="layout_maxWidth" id="0x7f04038a" />
@@ -1068,14 +1016,9 @@
     <public type="attr" name="layout_minWidth" id="0x7f04038c" />
     <public type="attr" name="layout_optimizationLevel" id="0x7f04038d" />
     <public type="attr" name="layout_order" id="0x7f04038e" />
-    <public type="attr" name="layout_scrollEffect" id="0x7f04038f" />
-    <public type="attr" name="layout_scrollFlags" id="0x7f040390" />
     <public type="attr" name="layout_scrollInterpolator" id="0x7f040391" />
-    <public type="attr" name="layout_viewType" id="0x7f040392" />
     <public type="attr" name="layout_wrapBefore" id="0x7f040393" />
     <public type="attr" name="lbDotRadius" id="0x7f040394" />
-    <public type="attr" name="lbImageCardViewType" id="0x7f040395" />
-    <public type="attr" name="lb_slideEdge" id="0x7f040396" />
     <public type="attr" name="liftOnScroll" id="0x7f040397" />
     <public type="attr" name="liftOnScrollColor" id="0x7f040398" />
     <public type="attr" name="liftOnScrollTargetViewId" id="0x7f040399" />
@@ -1103,7 +1046,6 @@
     <public type="attr" name="logo" id="0x7f0403af" />
     <public type="attr" name="logoAdjustViewBounds" id="0x7f0403b0" />
     <public type="attr" name="logoDescription" id="0x7f0403b1" />
-    <public type="attr" name="logoScaleType" id="0x7f0403b2" />
     <public type="attr" name="loopCount" id="0x7f0403b3" />
     <public type="attr" name="maintainLineSpacing" id="0x7f0403b4" />
     <public type="attr" name="marginHorizontal" id="0x7f0403b5" />
@@ -1215,8 +1157,6 @@
     <public type="attr" name="mediaRouteTheme" id="0x7f04041f" />
     <public type="attr" name="mediaRouteTvIconDrawable" id="0x7f040420" />
     <public type="attr" name="menu" id="0x7f040421" />
-    <public type="attr" name="menuAlignmentMode" id="0x7f040422" />
-    <public type="attr" name="menuGravity" id="0x7f040423" />
     <public type="attr" name="mhl_HeightDimen" id="0x7f040424" />
     <public type="attr" name="mhl_HeightRatio" id="0x7f040425" />
     <public type="attr" name="min" id="0x7f040426" />
@@ -1231,7 +1171,6 @@
     <public type="attr" name="mock_labelColor" id="0x7f04042f" />
     <public type="attr" name="mock_showDiagonals" id="0x7f040430" />
     <public type="attr" name="mock_showLabel" id="0x7f040431" />
-    <public type="attr" name="motionDebug" id="0x7f040432" />
     <public type="attr" name="motionDurationExtraLong1" id="0x7f040433" />
     <public type="attr" name="motionDurationExtraLong2" id="0x7f040434" />
     <public type="attr" name="motionDurationExtraLong3" id="0x7f040435" />
@@ -1260,7 +1199,6 @@
     <public type="attr" name="motionEasingStandardAccelerateInterpolator" id="0x7f04044c" />
     <public type="attr" name="motionEasingStandardDecelerateInterpolator" id="0x7f04044d" />
     <public type="attr" name="motionEasingStandardInterpolator" id="0x7f04044e" />
-    <public type="attr" name="motionInterpolator" id="0x7f04044f" />
     <public type="attr" name="motionPath" id="0x7f040450" />
     <public type="attr" name="motionPathRotate" id="0x7f040451" />
     <public type="attr" name="motionProgress" id="0x7f040452" />
@@ -1269,16 +1207,10 @@
     <public type="attr" name="motion_postLayoutCollision" id="0x7f040455" />
     <public type="attr" name="motion_triggerOnCollision" id="0x7f040456" />
     <public type="attr" name="moveWhenScrollAtTop" id="0x7f040457" />
-    <public type="attr" name="mpb_determinateCircularProgressStyle" id="0x7f040458" />
     <public type="attr" name="mpb_indeterminateTint" id="0x7f040459" />
-    <public type="attr" name="mpb_indeterminateTintMode" id="0x7f04045a" />
     <public type="attr" name="mpb_progressBackgroundTint" id="0x7f04045b" />
-    <public type="attr" name="mpb_progressBackgroundTintMode" id="0x7f04045c" />
-    <public type="attr" name="mpb_progressStyle" id="0x7f04045d" />
     <public type="attr" name="mpb_progressTint" id="0x7f04045e" />
-    <public type="attr" name="mpb_progressTintMode" id="0x7f04045f" />
     <public type="attr" name="mpb_secondaryProgressTint" id="0x7f040460" />
-    <public type="attr" name="mpb_secondaryProgressTintMode" id="0x7f040461" />
     <public type="attr" name="mpb_setBothDrawables" id="0x7f040462" />
     <public type="attr" name="mpb_showProgressBackground" id="0x7f040463" />
     <public type="attr" name="mpb_useIntrinsicPadding" id="0x7f040464" />
@@ -1290,20 +1222,16 @@
     <public type="attr" name="navigationRailStyle" id="0x7f04046a" />
     <public type="attr" name="navigationViewStyle" id="0x7f04046b" />
     <public type="attr" name="negativeButtonText" id="0x7f04046c" />
-    <public type="attr" name="nestedScrollFlags" id="0x7f04046d" />
     <public type="attr" name="nestedScrollViewStyle" id="0x7f04046e" />
     <public type="attr" name="nestedScrollable" id="0x7f04046f" />
     <public type="attr" name="number" id="0x7f040470" />
     <public type="attr" name="numberOfColumns" id="0x7f040471" />
     <public type="attr" name="numberOfRows" id="0x7f040472" />
-    <public type="attr" name="numericModifiers" id="0x7f040473" />
-    <public type="attr" name="offsetAlignmentMode" id="0x7f040474" />
     <public type="attr" name="onCross" id="0x7f040475" />
     <public type="attr" name="onHide" id="0x7f040476" />
     <public type="attr" name="onNegativeCross" id="0x7f040477" />
     <public type="attr" name="onPositiveCross" id="0x7f040478" />
     <public type="attr" name="onShow" id="0x7f040479" />
-    <public type="attr" name="onTouchUp" id="0x7f04047a" />
     <public type="attr" name="onboardingDescriptionStyle" id="0x7f04047b" />
     <public type="attr" name="onboardingHeaderStyle" id="0x7f04047c" />
     <public type="attr" name="onboardingLogoStyle" id="0x7f04047d" />
@@ -1336,7 +1264,6 @@
     <public type="attr" name="passwordToggleDrawable" id="0x7f040498" />
     <public type="attr" name="passwordToggleEnabled" id="0x7f040499" />
     <public type="attr" name="passwordToggleTint" id="0x7f04049a" />
-    <public type="attr" name="passwordToggleTintMode" id="0x7f04049b" />
     <public type="attr" name="pathMotionArc" id="0x7f04049c" />
     <public type="attr" name="path_percent" id="0x7f04049d" />
     <public type="attr" name="pause" id="0x7f04049e" />
@@ -1428,7 +1355,6 @@
     <public type="attr" name="repeat" id="0x7f0404f4" />
     <public type="attr" name="repeat_one" id="0x7f0404f5" />
     <public type="attr" name="repeat_toggle_modes" id="0x7f0404f6" />
-    <public type="attr" name="resizeTrigger" id="0x7f0404f7" />
     <public type="attr" name="resize_mode" id="0x7f0404f8" />
     <public type="attr" name="resizedPaddingAdjustmentBottom" id="0x7f0404f9" />
     <public type="attr" name="resizedPaddingAdjustmentTop" id="0x7f0404fa" />
@@ -1441,7 +1367,6 @@
     <public type="attr" name="rowHeaderDescriptionStyle" id="0x7f040501" />
     <public type="attr" name="rowHeaderDockStyle" id="0x7f040502" />
     <public type="attr" name="rowHeaderStyle" id="0x7f040503" />
-    <public type="attr" name="rowHeight" id="0x7f040504" />
     <public type="attr" name="rowHorizontalGridStyle" id="0x7f040505" />
     <public type="attr" name="rowHoverCardDescriptionStyle" id="0x7f040506" />
     <public type="attr" name="rowHoverCardTitleStyle" id="0x7f040507" />
@@ -1539,13 +1464,10 @@
     <public type="attr" name="shortcutMatchRequired" id="0x7f040563" />
     <public type="attr" name="shouldDisableView" id="0x7f040564" />
     <public type="attr" name="shouldRemoveExpandedCorners" id="0x7f040565" />
-    <public type="attr" name="showAnimationBehavior" id="0x7f040566" />
-    <public type="attr" name="showAsAction" id="0x7f040567" />
     <public type="attr" name="showDelay" id="0x7f040568" />
     <public type="attr" name="showDivider" id="0x7f040569" />
     <public type="attr" name="showDividerHorizontal" id="0x7f04056a" />
     <public type="attr" name="showDividerVertical" id="0x7f04056b" />
-    <public type="attr" name="showDividers" id="0x7f04056c" />
     <public type="attr" name="showMarker" id="0x7f04056d" />
     <public type="attr" name="showMotionSpec" id="0x7f04056e" />
     <public type="attr" name="showPaths" id="0x7f04056f" />
@@ -1597,9 +1519,7 @@
     <public type="attr" name="startIconContentDescription" id="0x7f04059d" />
     <public type="attr" name="startIconDrawable" id="0x7f04059e" />
     <public type="attr" name="startIconMinSize" id="0x7f04059f" />
-    <public type="attr" name="startIconScaleType" id="0x7f0405a0" />
     <public type="attr" name="startIconTint" id="0x7f0405a1" />
-    <public type="attr" name="startIconTintMode" id="0x7f0405a2" />
     <public type="attr" name="state_above_anchor" id="0x7f0405a3" />
     <public type="attr" name="state_collapsed" id="0x7f0405a4" />
     <public type="attr" name="state_collapsible" id="0x7f0405a5" />
@@ -1644,20 +1564,15 @@
     <public type="attr" name="switchTextOn" id="0x7f0405cc" />
     <public type="attr" name="tabBackground" id="0x7f0405cd" />
     <public type="attr" name="tabContentStart" id="0x7f0405ce" />
-    <public type="attr" name="tabGravity" id="0x7f0405cf" />
     <public type="attr" name="tabIconTint" id="0x7f0405d0" />
-    <public type="attr" name="tabIconTintMode" id="0x7f0405d1" />
     <public type="attr" name="tabIndicator" id="0x7f0405d2" />
     <public type="attr" name="tabIndicatorAnimationDuration" id="0x7f0405d3" />
-    <public type="attr" name="tabIndicatorAnimationMode" id="0x7f0405d4" />
     <public type="attr" name="tabIndicatorColor" id="0x7f0405d5" />
     <public type="attr" name="tabIndicatorFullWidth" id="0x7f0405d6" />
-    <public type="attr" name="tabIndicatorGravity" id="0x7f0405d7" />
     <public type="attr" name="tabIndicatorHeight" id="0x7f0405d8" />
     <public type="attr" name="tabInlineLabel" id="0x7f0405d9" />
     <public type="attr" name="tabMaxWidth" id="0x7f0405da" />
     <public type="attr" name="tabMinWidth" id="0x7f0405db" />
-    <public type="attr" name="tabMode" id="0x7f0405dc" />
     <public type="attr" name="tabPadding" id="0x7f0405dd" />
     <public type="attr" name="tabPaddingBottom" id="0x7f0405de" />
     <public type="attr" name="tabPaddingEnd" id="0x7f0405df" />
@@ -1674,7 +1589,6 @@
     <public type="attr" name="targetId" id="0x7f0405ea" />
     <public type="attr" name="telltales_tailColor" id="0x7f0405eb" />
     <public type="attr" name="telltales_tailScale" id="0x7f0405ec" />
-    <public type="attr" name="telltales_velocityMode" id="0x7f0405ed" />
     <public type="attr" name="textAllCaps" id="0x7f0405ee" />
     <public type="attr" name="textAppearanceBody1" id="0x7f0405ef" />
     <public type="attr" name="textAppearanceBody2" id="0x7f0405f0" />
@@ -1734,13 +1648,11 @@
     <public type="attr" name="thumbIcon" id="0x7f040626" />
     <public type="attr" name="thumbIconSize" id="0x7f040627" />
     <public type="attr" name="thumbIconTint" id="0x7f040628" />
-    <public type="attr" name="thumbIconTintMode" id="0x7f040629" />
     <public type="attr" name="thumbRadius" id="0x7f04062a" />
     <public type="attr" name="thumbStrokeColor" id="0x7f04062b" />
     <public type="attr" name="thumbStrokeWidth" id="0x7f04062c" />
     <public type="attr" name="thumbTextPadding" id="0x7f04062d" />
     <public type="attr" name="thumbTint" id="0x7f04062e" />
-    <public type="attr" name="thumbTintMode" id="0x7f04062f" />
     <public type="attr" name="thumbTrackGapSize" id="0x7f040630" />
     <public type="attr" name="thumbWidth" id="0x7f040631" />
     <public type="attr" name="thumb_down" id="0x7f040632" />
@@ -1762,7 +1674,6 @@
     <public type="attr" name="tintNavigationIcon" id="0x7f040642" />
     <public type="attr" name="title" id="0x7f040643" />
     <public type="attr" name="titleCentered" id="0x7f040644" />
-    <public type="attr" name="titleCollapseMode" id="0x7f040645" />
     <public type="attr" name="titleEnabled" id="0x7f040646" />
     <public type="attr" name="titleMargin" id="0x7f040647" />
     <public type="attr" name="titleMarginBottom" id="0x7f040648" />
@@ -1773,7 +1684,6 @@
     <public type="attr" name="titlePositionInterpolator" id="0x7f04064d" />
     <public type="attr" name="titleTextAppearance" id="0x7f04064e" />
     <public type="attr" name="titleTextColor" id="0x7f04064f" />
-    <public type="attr" name="titleTextEllipsize" id="0x7f040650" />
     <public type="attr" name="titleTextStyle" id="0x7f040651" />
     <public type="attr" name="toggleCheckedStateOnClick" id="0x7f040652" />
     <public type="attr" name="toolbarId" id="0x7f040653" />
@@ -1796,16 +1706,13 @@
     <public type="attr" name="trackCornerRadius" id="0x7f040664" />
     <public type="attr" name="trackDecoration" id="0x7f040665" />
     <public type="attr" name="trackDecorationTint" id="0x7f040666" />
-    <public type="attr" name="trackDecorationTintMode" id="0x7f040667" />
     <public type="attr" name="trackHeight" id="0x7f040668" />
     <public type="attr" name="trackInsideCornerSize" id="0x7f040669" />
     <public type="attr" name="trackStopIndicatorSize" id="0x7f04066a" />
     <public type="attr" name="trackThickness" id="0x7f04066b" />
     <public type="attr" name="trackTint" id="0x7f04066c" />
-    <public type="attr" name="trackTintMode" id="0x7f04066d" />
     <public type="attr" name="transitionDisable" id="0x7f04066e" />
     <public type="attr" name="transitionEasing" id="0x7f04066f" />
-    <public type="attr" name="transitionFlags" id="0x7f040670" />
     <public type="attr" name="transitionPathRotate" id="0x7f040671" />
     <public type="attr" name="transitionShapeAppearance" id="0x7f040672" />
     <public type="attr" name="triggerId" id="0x7f040673" />
@@ -1854,7 +1761,6 @@
     <public type="attr" name="zxing_framing_rect_height" id="0x7f04069e" />
     <public type="attr" name="zxing_framing_rect_width" id="0x7f04069f" />
     <public type="attr" name="zxing_possible_result_points" id="0x7f0406a0" />
-    <public type="attr" name="zxing_preview_scaling_strategy" id="0x7f0406a1" />
     <public type="attr" name="zxing_result_view" id="0x7f0406a2" />
     <public type="attr" name="zxing_scanner_layout" id="0x7f0406a3" />
     <public type="attr" name="zxing_use_texture_view" id="0x7f0406a4" />
@@ -3997,46 +3903,6 @@
     <public type="dimen" name="tooltip_vertical_padding" id="0x7f0707d7" />
     <public type="dimen" name="tooltip_y_offset_non_touch" id="0x7f0707d8" />
     <public type="dimen" name="tooltip_y_offset_touch" id="0x7f0707d9" />
-    <public type="drawable" name="$avd_hide_password__0" id="0x7f080000" />
-    <public type="drawable" name="$avd_hide_password__1" id="0x7f080001" />
-    <public type="drawable" name="$avd_hide_password__2" id="0x7f080002" />
-    <public type="drawable" name="$avd_show_password__0" id="0x7f080003" />
-    <public type="drawable" name="$avd_show_password__1" id="0x7f080004" />
-    <public type="drawable" name="$avd_show_password__2" id="0x7f080005" />
-    <public type="drawable" name="$m3_avd_hide_password__0" id="0x7f080006" />
-    <public type="drawable" name="$m3_avd_hide_password__1" id="0x7f080007" />
-    <public type="drawable" name="$m3_avd_hide_password__2" id="0x7f080008" />
-    <public type="drawable" name="$m3_avd_show_password__0" id="0x7f080009" />
-    <public type="drawable" name="$m3_avd_show_password__1" id="0x7f08000a" />
-    <public type="drawable" name="$m3_avd_show_password__2" id="0x7f08000b" />
-    <public type="drawable" name="$mtrl_checkbox_button_checked_unchecked__0" id="0x7f08000c" />
-    <public type="drawable" name="$mtrl_checkbox_button_checked_unchecked__1" id="0x7f08000d" />
-    <public type="drawable" name="$mtrl_checkbox_button_checked_unchecked__2" id="0x7f08000e" />
-    <public type="drawable" name="$mtrl_checkbox_button_icon_checked_indeterminate__0" id="0x7f08000f" />
-    <public type="drawable" name="$mtrl_checkbox_button_icon_checked_unchecked__0" id="0x7f080010" />
-    <public type="drawable" name="$mtrl_checkbox_button_icon_checked_unchecked__1" id="0x7f080011" />
-    <public type="drawable" name="$mtrl_checkbox_button_icon_checked_unchecked__2" id="0x7f080012" />
-    <public type="drawable" name="$mtrl_checkbox_button_icon_indeterminate_checked__0" id="0x7f080013" />
-    <public type="drawable" name="$mtrl_checkbox_button_icon_indeterminate_unchecked__0" id="0x7f080014" />
-    <public type="drawable" name="$mtrl_checkbox_button_icon_indeterminate_unchecked__1" id="0x7f080015" />
-    <public type="drawable" name="$mtrl_checkbox_button_icon_indeterminate_unchecked__2" id="0x7f080016" />
-    <public type="drawable" name="$mtrl_checkbox_button_icon_unchecked_checked__0" id="0x7f080017" />
-    <public type="drawable" name="$mtrl_checkbox_button_icon_unchecked_checked__1" id="0x7f080018" />
-    <public type="drawable" name="$mtrl_checkbox_button_icon_unchecked_checked__2" id="0x7f080019" />
-    <public type="drawable" name="$mtrl_checkbox_button_icon_unchecked_indeterminate__0" id="0x7f08001a" />
-    <public type="drawable" name="$mtrl_checkbox_button_icon_unchecked_indeterminate__1" id="0x7f08001b" />
-    <public type="drawable" name="$mtrl_checkbox_button_icon_unchecked_indeterminate__2" id="0x7f08001c" />
-    <public type="drawable" name="$mtrl_checkbox_button_unchecked_checked__0" id="0x7f08001d" />
-    <public type="drawable" name="$mtrl_checkbox_button_unchecked_checked__1" id="0x7f08001e" />
-    <public type="drawable" name="$mtrl_checkbox_button_unchecked_checked__2" id="0x7f08001f" />
-    <public type="drawable" name="$mtrl_switch_thumb_checked_pressed__0" id="0x7f080020" />
-    <public type="drawable" name="$mtrl_switch_thumb_checked_unchecked__0" id="0x7f080021" />
-    <public type="drawable" name="$mtrl_switch_thumb_checked_unchecked__1" id="0x7f080022" />
-    <public type="drawable" name="$mtrl_switch_thumb_pressed_checked__0" id="0x7f080023" />
-    <public type="drawable" name="$mtrl_switch_thumb_pressed_unchecked__0" id="0x7f080024" />
-    <public type="drawable" name="$mtrl_switch_thumb_unchecked_checked__0" id="0x7f080025" />
-    <public type="drawable" name="$mtrl_switch_thumb_unchecked_checked__1" id="0x7f080026" />
-    <public type="drawable" name="$mtrl_switch_thumb_unchecked_pressed__0" id="0x7f080027" />
     <public type="drawable" name="abc_ab_share_pack_mtrl_alpha" id="0x7f080028" />
     <public type="drawable" name="abc_action_bar_item_background_material" id="0x7f080029" />
     <public type="drawable" name="abc_btn_borderless_material" id="0x7f08002a" />
@@ -4143,8 +4009,6 @@
     <public type="drawable" name="audio_subtitle_track" id="0x7f08008f" />
     <public type="drawable" name="audio_track_icon" id="0x7f080090" />
     <public type="drawable" name="automation" id="0x7f080091" />
-    <public type="drawable" name="avd_hide_password" id="0x7f080092" />
-    <public type="drawable" name="avd_show_password" id="0x7f080093" />
     <public type="drawable" name="back_btn_effect" id="0x7f080094" />
     <public type="drawable" name="background_editext" id="0x7f080095" />
     <public type="drawable" name="backspress" id="0x7f080096" />
@@ -4317,7 +4181,6 @@
     <public type="drawable" name="design_fab_background" id="0x7f080158" />
     <public type="drawable" name="design_ic_visibility" id="0x7f080159" />
     <public type="drawable" name="design_ic_visibility_off" id="0x7f08015a" />
-    <public type="drawable" name="design_password_eye" id="0x7f08015b" />
     <public type="drawable" name="design_snackbar_background" id="0x7f08015c" />
     <public type="drawable" name="dis_con" id="0x7f08015d" />
     <public type="drawable" name="dot_background" id="0x7f08015e" />
@@ -4892,10 +4755,7 @@
     <public type="drawable" name="logout_icon_menu" id="0x7f0803f4" />
     <public type="drawable" name="logout_user" id="0x7f0803f5" />
     <public type="drawable" name="logp_white_long" id="0x7f0803f6" />
-    <public type="drawable" name="m3_avd_hide_password" id="0x7f0803f7" />
-    <public type="drawable" name="m3_avd_show_password" id="0x7f0803f8" />
     <public type="drawable" name="m3_bottom_sheet_drag_handle" id="0x7f0803f9" />
-    <public type="drawable" name="m3_password_eye" id="0x7f0803fa" />
     <public type="drawable" name="m3_popupmenu_background_overlay" id="0x7f0803fb" />
     <public type="drawable" name="m3_radiobutton_ripple" id="0x7f0803fc" />
     <public type="drawable" name="m3_selection_control_ripple" id="0x7f0803fd" />
@@ -4967,16 +4827,7 @@
     <public type="drawable" name="mr_vol_type_audiotrack_dark" id="0x7f080444" />
     <public type="drawable" name="mr_vol_type_audiotrack_light" id="0x7f080445" />
     <public type="drawable" name="mtrl_bottomsheet_drag_handle" id="0x7f080446" />
-    <public type="drawable" name="mtrl_checkbox_button" id="0x7f080447" />
-    <public type="drawable" name="mtrl_checkbox_button_checked_unchecked" id="0x7f080448" />
     <public type="drawable" name="mtrl_checkbox_button_icon" id="0x7f080449" />
-    <public type="drawable" name="mtrl_checkbox_button_icon_checked_indeterminate" id="0x7f08044a" />
-    <public type="drawable" name="mtrl_checkbox_button_icon_checked_unchecked" id="0x7f08044b" />
-    <public type="drawable" name="mtrl_checkbox_button_icon_indeterminate_checked" id="0x7f08044c" />
-    <public type="drawable" name="mtrl_checkbox_button_icon_indeterminate_unchecked" id="0x7f08044d" />
-    <public type="drawable" name="mtrl_checkbox_button_icon_unchecked_checked" id="0x7f08044e" />
-    <public type="drawable" name="mtrl_checkbox_button_icon_unchecked_indeterminate" id="0x7f08044f" />
-    <public type="drawable" name="mtrl_checkbox_button_unchecked_checked" id="0x7f080450" />
     <public type="drawable" name="mtrl_dialog_background" id="0x7f080451" />
     <public type="drawable" name="mtrl_dropdown_arrow" id="0x7f080452" />
     <public type="drawable" name="mtrl_ic_arrow_drop_down" id="0x7f080453" />
@@ -4992,14 +4843,8 @@
     <public type="drawable" name="mtrl_popupmenu_background_overlay" id="0x7f08045d" />
     <public type="drawable" name="mtrl_switch_thumb" id="0x7f08045e" />
     <public type="drawable" name="mtrl_switch_thumb_checked" id="0x7f08045f" />
-    <public type="drawable" name="mtrl_switch_thumb_checked_pressed" id="0x7f080460" />
-    <public type="drawable" name="mtrl_switch_thumb_checked_unchecked" id="0x7f080461" />
     <public type="drawable" name="mtrl_switch_thumb_pressed" id="0x7f080462" />
-    <public type="drawable" name="mtrl_switch_thumb_pressed_checked" id="0x7f080463" />
-    <public type="drawable" name="mtrl_switch_thumb_pressed_unchecked" id="0x7f080464" />
     <public type="drawable" name="mtrl_switch_thumb_unchecked" id="0x7f080465" />
-    <public type="drawable" name="mtrl_switch_thumb_unchecked_checked" id="0x7f080466" />
-    <public type="drawable" name="mtrl_switch_thumb_unchecked_pressed" id="0x7f080467" />
     <public type="drawable" name="mtrl_switch_track" id="0x7f080468" />
     <public type="drawable" name="mtrl_switch_track_decoration" id="0x7f080469" />
     <public type="drawable" name="mtrl_tabs_default_indicator" id="0x7f08046a" />

@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId = "com.tiviplay.tiviplaybox"
-        minSdk = 21
+        minSdk = 23
         targetSdk = 35
         versionCode = 100
         versionName = "5.0"
@@ -26,9 +26,14 @@ android {
     }
 }
 
+configurations.all {
+    exclude(group = "com.android.support")
+}
+
 dependencies {
     // AndroidX / UI
     implementation("androidx.appcompat:appcompat:1.7.0")
+    implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.leanback:leanback:1.0.0")
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation("androidx.fragment:fragment:1.8.3")

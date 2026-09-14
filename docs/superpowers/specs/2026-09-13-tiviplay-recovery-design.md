@@ -168,3 +168,7 @@ comandos se puede hacer sin él, pero la experiencia completa de desarrollo la r
   documento.
 - El tiempo total depende de cuántas etapas requieran arreglos manuales extensos; se
   estructura por etapas justamente para poder pausar/reanudar y medir avance real.
+
+## Progress log
+
+- 2026-09-14: Stage 0 (compiling, installable skeleton) complete. `assembleDebug` succeeds, `SplashActivity` stub installs and launches without crashing. Minor fix applied: added missing Google Mobile Ads (AdMob) APPLICATION_ID metadata to AndroidManifest.xml (test app ID: ca-app-pub-3940256099942544~3347511713) to prevent initialization failure. No proprietary logic recovered yet � see the Stage 1 plan for the data layer.

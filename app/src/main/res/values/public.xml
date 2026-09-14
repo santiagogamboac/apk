@@ -163,7 +163,6 @@
     <public type="attr" name="actionBarDivider" id="0x7f040003" />
     <public type="attr" name="actionBarItemBackground" id="0x7f040004" />
     <public type="attr" name="actionBarPopupTheme" id="0x7f040005" />
-    <public type="attr" name="actionBarSize" id="0x7f040006" />
     <public type="attr" name="actionBarSplitStyle" id="0x7f040007" />
     <public type="attr" name="actionBarStyle" id="0x7f040008" />
     <public type="attr" name="actionBarTabBarStyle" id="0x7f040009" />
@@ -240,7 +239,6 @@
     <public type="attr" name="autoSizeMinTextSize" id="0x7f040052" />
     <public type="attr" name="autoSizePresetSizes" id="0x7f040053" />
     <public type="attr" name="autoSizeStepGranularity" id="0x7f040054" />
-    <public type="attr" name="autoSizeTextType" id="0x7f040055" />
     <public type="attr" name="auto_show" id="0x7f040057" />
     <public type="attr" name="backHandlingEnabled" id="0x7f040058" />
     <public type="attr" name="background" id="0x7f040059" />
@@ -330,7 +328,6 @@
     <public type="attr" name="buttonStyle" id="0x7f0400b5" />
     <public type="attr" name="buttonStyleSmall" id="0x7f0400b6" />
     <public type="attr" name="buttonTint" id="0x7f0400b7" />
-    <public type="attr" name="buttonTintMode" id="0x7f0400b8" />
     <public type="attr" name="cardBackground" id="0x7f0400b9" />
     <public type="attr" name="cardBackgroundColor" id="0x7f0400ba" />
     <public type="attr" name="cardCornerRadius" id="0x7f0400bb" />
@@ -394,7 +391,6 @@
     <public type="attr" name="checkBoxPreferenceStyle" id="0x7f0400f7" />
     <public type="attr" name="checkMarkCompat" id="0x7f0400f8" />
     <public type="attr" name="checkMarkTint" id="0x7f0400f9" />
-    <public type="attr" name="checkMarkTintMode" id="0x7f0400fa" />
     <public type="attr" name="checkboxStyle" id="0x7f0400fb" />
     <public type="attr" name="checkedButton" id="0x7f0400fc" />
     <public type="attr" name="checkedChip" id="0x7f0400fd" />
@@ -609,7 +605,6 @@
     <public type="attr" name="dialogTheme" id="0x7f0401d9" />
     <public type="attr" name="dialogTitle" id="0x7f0401da" />
     <public type="attr" name="disableDependentsState" id="0x7f0401db" />
-    <public type="attr" name="displayOptions" id="0x7f0401dc" />
     <public type="attr" name="divider" id="0x7f0401dd" />
     <public type="attr" name="dividerColor" id="0x7f0401de" />
     <public type="attr" name="dividerDrawable" id="0x7f0401df" />
@@ -644,7 +639,6 @@
     <public type="attr" name="drawableSize" id="0x7f0401fc" />
     <public type="attr" name="drawableStartCompat" id="0x7f0401fd" />
     <public type="attr" name="drawableTint" id="0x7f0401fe" />
-    <public type="attr" name="drawableTintMode" id="0x7f0401ff" />
     <public type="attr" name="drawableTopCompat" id="0x7f040200" />
     <public type="attr" name="drawerArrowStyle" id="0x7f040201" />
     <public type="attr" name="drawerLayoutCornerSize" id="0x7f040202" />
@@ -953,7 +947,6 @@
     <public type="attr" name="layoutManager" id="0x7f04034a" />
     <public type="attr" name="layout_alignSelf" id="0x7f04034b" />
     <public type="attr" name="layout_anchor" id="0x7f04034c" />
-    <public type="attr" name="layout_anchorGravity" id="0x7f04034d" />
     <public type="attr" name="layout_behavior" id="0x7f04034e" />
     <public type="attr" name="layout_collapseParallaxMultiplier" id="0x7f040350" />
     <public type="attr" name="layout_constrainedHeight" id="0x7f040351" />
@@ -1218,7 +1211,6 @@
     <public type="attr" name="navigationContentDescription" id="0x7f040466" />
     <public type="attr" name="navigationIcon" id="0x7f040467" />
     <public type="attr" name="navigationIconTint" id="0x7f040468" />
-    <public type="attr" name="navigationMode" id="0x7f040469" />
     <public type="attr" name="navigationRailStyle" id="0x7f04046a" />
     <public type="attr" name="navigationViewStyle" id="0x7f04046b" />
     <public type="attr" name="negativeButtonText" id="0x7f04046c" />
@@ -1664,13 +1656,11 @@
     <public type="attr" name="tickColorInactive" id="0x7f040638" />
     <public type="attr" name="tickMark" id="0x7f040639" />
     <public type="attr" name="tickMarkTint" id="0x7f04063a" />
-    <public type="attr" name="tickMarkTintMode" id="0x7f04063b" />
     <public type="attr" name="tickRadiusActive" id="0x7f04063c" />
     <public type="attr" name="tickRadiusInactive" id="0x7f04063d" />
     <public type="attr" name="tickVisible" id="0x7f04063e" />
     <public type="attr" name="time_bar_min_update_interval" id="0x7f04063f" />
     <public type="attr" name="tint" id="0x7f040640" />
-    <public type="attr" name="tintMode" id="0x7f040641" />
     <public type="attr" name="tintNavigationIcon" id="0x7f040642" />
     <public type="attr" name="title" id="0x7f040643" />
     <public type="attr" name="titleCentered" id="0x7f040644" />

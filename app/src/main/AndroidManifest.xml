@@ -143,7 +143,7 @@
         <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.SeriesActivtyNewFlow" android:screenOrientation="sensorLandscape" />
         <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.SeriesActivitNewFlowSubCat" android:screenOrientation="sensorLandscape" />
         <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.GeneralSettingsActivity" android:screenOrientation="sensorLandscape" />
-        <receiver android:enabled="true" android:exported="false" android:name="com.tiviplay.tiviplaybox.view.activity.BootStartupActivity" android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+        <receiver android:enabled="true" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.BootStartupActivity" android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.QUICKBOOT_POWERON" />

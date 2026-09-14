@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId = "com.tiviplay.tiviplaybox"
-        minSdk = 23
+        minSdk = 21
         targetSdk = 35
         versionCode = 100
         versionName = "5.0"
@@ -63,7 +63,7 @@ dependencies {
     implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.29")
 
     // Firebase / push
-    implementation(platform("com.google.firebase:firebase-bom:33.5.1"))
+    implementation(platform("com.google.firebase:firebase-bom:32.8.1"))
     implementation("com.google.firebase:firebase-messaging")
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-auth")

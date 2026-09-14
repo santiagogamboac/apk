@@ -422,8 +422,6 @@ plan), JADX 1.5.6, APKTool 3.0.3.
               isMinifyEnabled = false
           }
       }
-
-      ndkVersion = "26.1.10909125"
   }
 
   dependencies {

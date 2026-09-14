@@ -348,6 +348,10 @@
         <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.view.activity.PrivacyPolicyActivity" android:screenOrientation="sensorLandscape" />
         <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tiviplay.tiviplaybox.sbpfunction.activitypushnotification.MaintanencePannelActivity" android:screenOrientation="sensorLandscape" />
         <meta-data android:name="com.google.android.gms.ads.AD_MANAGER_APP" android:value="true" />
+        <!-- STAGE0-PLACEHOLDER: Google's public AdMob test ID, not TiviPlay's real ID (not recoverable from
+             the APK - original manifest has no APPLICATION_ID, only AD_MANAGER_APP=true, consistent with the
+             app predating play-services-ads 17.0.0's enforcement of this field). Replace before any real ad
+             integration or release build. -->
         <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-3940256099942544~3347511713" />
         <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
         <uses-library android:name="androidx.window.extensions" android:required="false" />

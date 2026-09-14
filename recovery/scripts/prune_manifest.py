@@ -1,10 +1,25 @@
 # recovery/scripts/prune_manifest.py
+import os
 import sys
 import xml.etree.ElementTree as ET
 
 ANDROID_NS = "http://schemas.android.com/apk/res/android"
+TOOLS_NS = "http://schemas.android.com/tools"
 ET.register_namespace("android", ANDROID_NS)
+ET.register_namespace("tools", TOOLS_NS)
 NAME_ATTR = f"{{{ANDROID_NS}}}name"
+
+# This script prunes the RECOVERY staging copy of the manifest, not the live project manifest
+# that Stage 1+ will be hand-editing. Running it against app/src/main/AndroidManifest.xml would
+# silently drop any comments added there since (xml.etree drops comments unless told to keep
+# them) and is never the intended use - guard against that instead of trusting the caller.
+LIVE_MANIFEST_MARKER = "app/src/main"
+
+
+def refuses_live_manifest(manifest_path: str) -> bool:
+    normalized = os.path.abspath(manifest_path).replace("\\", "/")
+    return LIVE_MANIFEST_MARKER in normalized
+
 
 KEEP_PREFIX = "com.tiviplay.tiviplaybox"
 KEEP_EXACT = {"androidx.core.content.FileProvider"}
@@ -25,7 +40,22 @@ def should_keep(name: str) -> bool:
 
 
 def prune(manifest_path: str) -> tuple[int, int]:
-    tree = ET.parse(manifest_path)
+    if refuses_live_manifest(manifest_path):
+        print(
+            f"error: refusing to run against '{manifest_path}' - this script targets the "
+            "recovery staging copy (recovery/apktool-out/AndroidManifest.xml) only, not the "
+            "live project manifest under app/src/main/, which Stage 1+ edits by hand. Make any "
+            "changes needed there by hand instead.",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+
+    # Preserve XML comments across the parse/serialize round-trip (ET's default parser silently
+    # drops them) and keep the "tools" namespace prefix stable (ET otherwise renames unregistered
+    # prefixes to "ns0"/"ns1" on write - cosmetic since AGP's manifest merger keys off the
+    # namespace URI, but surprising output).
+    parser = ET.XMLParser(target=ET.TreeBuilder(insert_comments=True))
+    tree = ET.parse(manifest_path, parser=parser)
     root = tree.getroot()
     package = root.get("package")
     application = root.find("application")

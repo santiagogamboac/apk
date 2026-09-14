@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_focused="false" android:drawable="@drawable/selector_refresh_unfocused" />
-    <item android:state_focused="true" android:drawable="@drawable/selector_refresh_focused" />
-    <item android:drawable="@drawable/selector_refresh_unfocused" />
-</selector>

@@ -4,3 +4,15 @@
 /local.properties
 *.iml
 /.idea/
+
+# APKTool output: regenerable artifacts (only AndroidManifest.xml is tracked)
+/recovery/apktool-out/res/
+/recovery/apktool-out/assets/
+/recovery/apktool-out/smali/
+/recovery/apktool-out/smali_classes2/
+/recovery/apktool-out/smali_classes3/
+/recovery/apktool-out/smali_classes4/
+/recovery/apktool-out/lib/
+/recovery/apktool-out/original/
+/recovery/apktool-out/unknown/
+/recovery/apktool-out/apktool.yml

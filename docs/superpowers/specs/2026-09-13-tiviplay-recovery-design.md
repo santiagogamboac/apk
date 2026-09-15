@@ -52,7 +52,7 @@ TiviPlayRecovered/
 │       │   ├── view/demo/               (Activities basadas en ExoPlayer)
 │       │   ├── view/services/           (VideoDownloadService)
 │       │   ├── model/pojo/              (DTOs Gson)
-│       │   ├── model/callback/          (Callbacks Retrofit, uno por endpoint)
+│       │   ├── model/callback/          (POJOs de respuesta Gson, uno por endpoint — NO son retrofit2.Callback pese al nombre)
 │       │   ├── model/database/          (SQLiteOpenHelper manuales)
 │       │   ├── model/webrequest/        (interfaz Retrofit: RetrofitPost)
 │       │   ├── billingClientApp/        (portal de suscripción/facturación)
@@ -118,12 +118,16 @@ pequeño de clases por etapa, en vez de enfrentar 2,000 archivos rotos a la vez.
 
 ## 6. Flujo de datos (sin cambios respecto al original)
 
-Activity → método de `RetrofitPost` (Retrofit) → `XxxCallback` (implementa
-`retrofit2.Callback`) → parseo a POJO (Gson) → persistencia en SQLite (`*DBHandler`) o
-`SharedPreferences` (blobs JSON vía Gson) o actualización de singletons en memoria para
-listas grandes → la UI lee directamente de esas fuentes (no hay `ViewModel`/`LiveData` en el
-original; se mantiene el patrón tal cual durante la recuperación, sin modernizar
-arquitectura).
+Activity → método de `RetrofitPost` (Retrofit) → respuesta deserializada directamente a un
+`XxxCallback` (a pesar del nombre, son POJOs planos de Gson — NO implementan
+`retrofit2.Callback` ni contienen lógica propia; corregido en la Etapa 1 tras ver el código
+decompilado real, ver §7.2 y `SRS_TiviPlay.md` §3.14) → parseo a POJO anidado (Gson) →
+persistencia en SQLite (`*DBHandler`) o `SharedPreferences` (blobs JSON vía Gson) o
+actualización de singletons en memoria para listas grandes → la UI lee directamente de esas
+fuentes (no hay `ViewModel`/`LiveData` en el original; se mantiene el patrón tal cual durante
+la recuperación, sin modernizar arquitectura). La lógica real de `retrofit2.Callback`
+(manejo de éxito/error de cada llamada) vive presumiblemente en cada Activity que invoca
+`RetrofitPost` — aún no recuperada, se confirmará en una etapa posterior.
 
 ## 7. Manejo de errores esperado durante la recuperación
 

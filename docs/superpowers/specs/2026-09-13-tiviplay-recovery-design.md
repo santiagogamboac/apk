@@ -162,17 +162,49 @@ retorno junto a una `YouTubePlayerView`, etc.) sin necesitar el mapping.
    sustitución con una nota breve explicando la inferencia — no hace falta un placeholder,
    es una sustitución directa y verificable por el propio código que la rodea.
 2. Si el paquete en sí es sintético (una o dos letras, o `p<número><letra>`) y no corresponde
-   a ninguna librería identificable, la referencia se considera **irrecuperable**: no
-   se debe intentar adivinar de qué clase/librería original se trataba. En su lugar,
-   reconstruir un placeholder **local y mínimo** (solo los campos/métodos que ese archivo
-   específico usa, no un intento de replicar toda la clase original) con un comentario
-   `STAGE<N>-PLACEHOLDER` explicando que es una reconstrucción de una referencia ofuscada
-   irrecuperable. No unificar placeholders entre archivos distintos aunque JADX les haya
-   asignado el mismo nombre sintético (ej. `AbstractC0842a` aparece en un comparador de
-   orden en `model/callback/` y, sin ninguna relación aparente, en el nombre de archivo de
-   SharedPreferences y flags booleanos en `model/database/` — probablemente la misma clase
-   original de constantes globales, pero replicar esa relación sin evidencia real sería
-   inventar una arquitectura que no podemos verificar).
+   a ninguna librería identificable, lo **irrecuperable es la identidad** de la clase/librería
+   original (su nombre real, de qué proyecto venía) — **no necesariamente su contenido**.
+   JADX decompiló TODO el APK, así que la fuente completa de esa clase sintética
+   probablemente ya existe en `recovery/jadx-out/sources/<PaqueteSintético>/`. **Paso
+   obligatorio antes de inventar cualquier valor**: abrir ese archivo y leer el valor real
+   del campo/constante/cuerpo del método directamente ahí (igual que se hizo para
+   `Name.MARK`, `ChartFactory.TITLE` y los constantes de ijkplayer — no son adivinanzas,
+   son lecturas directas de bytecode/fuente real). Solo si esa fuente decompilada
+   **también** falta o está corrompida al punto de no poder interpretarse (raro) se recurre
+   a un placeholder con un valor plausible por defecto — y ese placeholder debe marcarse
+   claramente como un valor NO verificado, distinto de un valor leído del código real.
+   (Lección de la Etapa 1: cinco valores se adivinaron en Task 3 sin revisar
+   `recovery/jadx-out/sources/J7/` y `R7/`, y cuatro resultaron incorrectos — la fuente real
+   estaba ahí todo el tiempo.)
+   - Reconstruir el acceso **local y mínimo** (solo los campos/métodos que ese archivo
+     específico usa, no la clase sintética completa) con un comentario indicando el
+     paquete/clase sintética de origen y si el valor fue leído de la fuente real o es un
+     placeholder plausible sin verificar.
+   - No unificar reconstrucciones entre archivos distintos aunque JADX les haya asignado
+     el mismo nombre sintético (ej. `AbstractC0842a` aparece en un comparador de orden en
+     `model/callback/` y, sin relación aparente, en el nombre de archivo de SharedPreferences
+     y flags booleanos en `model/database/` — probablemente la misma clase original de
+     constantes globales, pero replicar esa relación sin evidencia real sería inventar una
+     arquitectura que no podemos verificar; cada archivo lee del original solo lo que él
+     mismo usa).
+
+### 7.2. Brechas funcionales conocidas, pendientes de una etapa futura
+
+Esta sección registra defectos reales de comportamiento (no solo de compilación) detectados
+durante la recuperación, para que una etapa futura que dependa de ese código sepa que necesita
+arreglo real, no solo que "ya compila":
+
+- **`LiveStreamDBHandler.getAllLiveStreasWithCategoryId` y `getAllSeriesStreamsWithCategoryId`
+  devuelven `null`/lista vacía para la mayoría de los IDs de categoría reales**, no solo un
+  camino residual raro. La reconstrucción de JADX dejó el código que arma la consulta SQL
+  (`str7`/`string` en cada método) ubicado DESPUÉS del único punto donde se usa para
+  `rawQuery(...)`, un defecto de reordenamiento del bloque "duplicado" que JADX no pudo
+  reconciliar (ver Etapa 1, Task 3). No es un problema introducido por la recuperación: el
+  código decompilado tal cual no compila sin alguna intervención, y el arreglo mínimo
+  (agregar `return null;` en el hueco) solo permite compilar sin dejar de estar roto en
+  tiempo de ejecución. Requiere reconstrucción real (mover la construcción de la consulta a
+  las ramas correctas) antes de que la navegación de Live TV/Series por categoría funcione —
+  no dar por buena esta función solo porque compila.
 
 ## 8. Validación
 

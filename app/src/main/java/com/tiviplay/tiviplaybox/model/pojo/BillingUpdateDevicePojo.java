@@ -1,0 +1,32 @@
+package com.tiviplay.tiviplaybox.model.pojo;
+
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+/* JADX INFO: loaded from: classes3.dex */
+public class BillingUpdateDevicePojo {
+
+    @SerializedName("devicename")
+    @Expose
+    private String devicename;
+
+    @SerializedName("mac")
+    @Expose
+    private String mac;
+
+    public String getDevicename() {
+        return this.devicename;
+    }
+
+    public String getMac() {
+        return this.mac;
+    }
+
+    public void setDevicename(String str) {
+        this.devicename = str;
+    }
+
+    public void setMac(String str) {
+        this.mac = str;
+    }
+}

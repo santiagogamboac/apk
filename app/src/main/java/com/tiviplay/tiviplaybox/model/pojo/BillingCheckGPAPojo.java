@@ -1,0 +1,20 @@
+package com.tiviplay.tiviplaybox.model.pojo;
+
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+/* JADX INFO: loaded from: classes3.dex */
+public class BillingCheckGPAPojo {
+
+    @SerializedName("email")
+    @Expose
+    private String email;
+
+    public String getEmail() {
+        return this.email;
+    }
+
+    public void setEmail(String str) {
+        this.email = str;
+    }
+}

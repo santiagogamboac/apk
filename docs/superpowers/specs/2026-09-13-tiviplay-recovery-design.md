@@ -135,6 +135,45 @@ antemano; el plan de implementación tratará cada etapa como un ciclo
 "decompilar → intentar compilar → corregir errores → repetir", acotado al conjunto de
 clases de esa etapa.
 
+### 7.1. Patrón descubierto: repaquetizado global de R8 (paquetes sintéticos de una letra)
+
+Durante la Etapa 1 se confirmó que este build usó repaquetizado agresivo de R8 (equivalente
+a `-repackageclasses`): **miles** de clases —tanto propias como de librerías de terceros que
+no tenían reglas `keep` explícitas— terminaron movidas a paquetes sintéticos de una o dos
+letras (`A`, `A0`...`Z8`) o con prefijo `p<número><letra>` (`p101j8`, `p170q7`, etc., el
+prefijo `p` lo agrega JADX cuando el nombre crudo no es un identificador Java válido). JADX
+les asigna nombres de clase legibles pero arbitrarios (`AbstractC0842a`, `C1271x`, etc.) que
+**no tienen relación con el nombre ni el paquete originales** y no son recuperables sin el
+`mapping.txt` (perdido, ver §1).
+
+Se confirmó también que este repaquetizado afectó a clases públicas de librerías conocidas
+que normalmente sí se preservan (ej. `androidx.lifecycle.ViewModel`/`LiveData`/
+`MutableLiveData` aparecen como `androidx.lifecycle.Q`/`AbstractC1269v`/`C1271x`) — es decir,
+el paquete de la clase puede ser real y reconocible (`androidx.lifecycle`) mientras el
+**nombre de la clase** es sintético, lo cual en varios casos permite inferir con confianza
+razonable qué clase real era por el contexto de uso (superclase de un `ViewModel`, tipo de
+retorno junto a una `YouTubePlayerView`, etc.) sin necesitar el mapping.
+
+**Política de manejo, aplicada de forma consistente en todas las etapas:**
+
+1. Si el paquete de la importación es reconocible (ej. `androidx.lifecycle.*`,
+   `com.google.android.gms.*`) pero la clase tiene un nombre sintético, inferir la clase real
+   por el patrón de uso (superclase, firma de método, tipo de campos hermanos) y aplicar la
+   sustitución con una nota breve explicando la inferencia — no hace falta un placeholder,
+   es una sustitución directa y verificable por el propio código que la rodea.
+2. Si el paquete en sí es sintético (una o dos letras, o `p<número><letra>`) y no corresponde
+   a ninguna librería identificable, la referencia se considera **irrecuperable**: no
+   se debe intentar adivinar de qué clase/librería original se trataba. En su lugar,
+   reconstruir un placeholder **local y mínimo** (solo los campos/métodos que ese archivo
+   específico usa, no un intento de replicar toda la clase original) con un comentario
+   `STAGE<N>-PLACEHOLDER` explicando que es una reconstrucción de una referencia ofuscada
+   irrecuperable. No unificar placeholders entre archivos distintos aunque JADX les haya
+   asignado el mismo nombre sintético (ej. `AbstractC0842a` aparece en un comparador de
+   orden en `model/callback/` y, sin ninguna relación aparente, en el nombre de archivo de
+   SharedPreferences y flags booleanos en `model/database/` — probablemente la misma clase
+   original de constantes globales, pero replicar esa relación sin evidencia real sería
+   inventar una arquitectura que no podemos verificar).
+
 ## 8. Validación
 
 No existe suite de pruebas en el original (no se detectaron clases de JUnit/AndroidX Test

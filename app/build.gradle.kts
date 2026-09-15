@@ -43,6 +43,8 @@ dependencies {
     implementation("androidx.datastore:datastore-preferences:1.1.1")
     implementation("androidx.mediarouter:mediarouter:1.7.0")
     implementation("androidx.emoji2:emoji2:1.5.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel:2.8.7")
+    implementation("androidx.lifecycle:lifecycle-livedata:2.8.7")
 
     // Networking / parsing
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
@@ -81,4 +83,5 @@ dependencies {
     implementation("com.journeyapps:zxing-android-embedded:4.3.0")
     implementation("com.afollestad.material-dialogs:core:0.9.6.0")
     implementation("com.google.android.recaptcha:recaptcha:18.4.0")
+    implementation("com.pierfrancescosoffritti.androidyoutubeplayer:core:12.1.2")
 }

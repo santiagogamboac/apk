@@ -93,7 +93,10 @@ public class LiveStreamDBHandler extends SQLiteOpenHelper {
      * parse/reformat that is equivalent, for this purpose, to formatting the current date
      * directly). Used twice (both updateImportStatus overloads) to populate a "date" column
      * (KEY_DATE_IMPORT_STATUS = "date") alongside a separately-captured
-     * System.currentTimeMillis() timestamp column.
+     * System.currentTimeMillis() timestamp column. This reconstruction uses Locale.US
+     * explicitly, whereas the original J7.z.Y() used the JVM default locale - a minor,
+     * deliberate, documented deviation made for deterministic behavior, not a fidelity
+     * concern since the "dd/MM/yyyy" format is purely numeric and locale-invariant.
      */
     private static String stage1PlaceholderJ7ZCurrentDateString() {
         return new java.text.SimpleDateFormat("dd/MM/yyyy", java.util.Locale.US).format(java.util.Calendar.getInstance().getTime());
@@ -3008,9 +3011,15 @@ public class LiveStreamDBHandler extends SQLiteOpenHelper {
          * constant everywhere else in this method (TABLE_IPTV_PASSWORD_STATUS and
          * KEY_PASSWORD_STATUS respectively), so initializing them to that value is a confident
          * reconstruction, not a guess. str7 and string hold a full dynamically-built SQL query
-         * string that varies per branch (no single safe value), so they default to null - this
-         * only matters on the narrow gap path above, which does not appear reachable through
-         * this method's normal (live-category) call sites. */
+         * string that varies per branch (no single safe value), so they default to null.
+         * KNOWN FUNCTIONAL GAP (not just a compile-time patch): this null default is actually
+         * hit for most real category IDs, not a narrow/unreachable edge case - the query-
+         * builder code that assigns str7/string was left by JADX's reconstruction positioned
+         * AFTER the only point where it is used for rawQuery(...), so this method returns
+         * null/an empty result for most category IDs at runtime today. This is a pre-existing
+         * JADX decompilation defect, not something introduced by this recovery, and requires
+         * real reconstruction (moving the query-building code to the correct branches) before
+         * Live TV category navigation works - see design spec §7.2 for full details. */
         String str3 = TABLE_IPTV_PASSWORD_STATUS;
         byte b10;
         String string = null;
@@ -5582,7 +5591,14 @@ public class LiveStreamDBHandler extends SQLiteOpenHelper {
          * assign them on every branch. obj4 is always assigned the same single constant
          * ("onestream_api") everywhere else in this method, so that's a confident
          * reconstruction. str3 holds a per-branch SQL query string with no single safe value,
-         * so it defaults to null. */
+         * so it defaults to null.
+         * KNOWN FUNCTIONAL GAP (not just a compile-time patch): same pre-existing JADX
+         * decompilation defect as getAllLiveStreasWithCategoryId - the query-builder code
+         * that assigns str3 was left positioned AFTER the only point where it is used for
+         * rawQuery(...), so this method returns null/an empty result for most real category
+         * IDs at runtime today, not just a narrow edge case. Requires real reconstruction
+         * (moving the query-building code to the correct branches) before Series category
+         * navigation works - see design spec §7.2 for full details. */
         Object obj4 = "onestream_api";
         String str3 = null;
         long jCurrentTimeMillis = System.currentTimeMillis();

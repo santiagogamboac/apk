@@ -7,26 +7,31 @@ import java.util.Comparator;
 
 /* JADX INFO: loaded from: classes3.dex */
 public class GetEpisdoeDetailsCallback implements Serializable {
-    // STAGE1-PLACEHOLDER: original field referenced J7.AbstractC0842a, an obfuscated
-    // third-party class that could not be identified or resolved (confirmed not
-    // achartengine/ijkplayer/simple-xml). Reconstructed locally with matching
-    // structure (4 distinct constants compared for equality) to preserve the
-    // comparator's relative sort behavior. If real behavior differs, this is where to fix it.
-    private static final int SORT_MODE_TITLE_ASC = 0;
-    private static final int SORT_MODE_TITLE_DESC = 1;
-    private static final int SORT_MODE_DATE_ADDED_DESC = 2;
-    private static int currentSortMode = SORT_MODE_TITLE_ASC;
+    // Original field referenced J7.AbstractC0842a, a synthetic-package (R8-repackaged)
+    // class whose identity is unrecoverable but whose content was recovered directly
+    // from the decompiled source: recovery/jadx-out/sources/J7/AbstractC0842a.java:343-346.
+    // The real fields are a MUTABLE String sort-mode field (f7818L, default "") compared
+    // against three String constants (f7820M = "atoz", f7822N = "ztoa", f7824O =
+    // "last_added") - not int constants with a locked-in default, as an earlier
+    // placeholder incorrectly guessed. Default "" matches none of the three literals, so
+    // the original comparator is unsorted (returns 0) until something sets the mode -
+    // nothing in this file does that yet (matches the original: a static mutable field
+    // toggled by not-yet-recovered sort-UI, to be wired up in a later stage).
+    private static final String SORT_MODE_TITLE_ASC = "atoz";
+    private static final String SORT_MODE_TITLE_DESC = "ztoa";
+    private static final String SORT_MODE_DATE_ADDED = "last_added";
+    private static String sortMode = "";
 
     public static Comparator<GetEpisdoeDetailsCallback> episodeComparator = new Comparator<GetEpisdoeDetailsCallback>() { // from class: com.tiviplay.tiviplaybox.model.callback.GetEpisdoeDetailsCallback.1
         @Override // java.util.Comparator
         public int compare(GetEpisdoeDetailsCallback getEpisdoeDetailsCallback, GetEpisdoeDetailsCallback getEpisdoeDetailsCallback2) {
-            if (currentSortMode == SORT_MODE_TITLE_ASC) {
+            if (sortMode.equals(SORT_MODE_TITLE_ASC)) {
                 return getEpisdoeDetailsCallback.getTitle().toUpperCase().compareTo(getEpisdoeDetailsCallback2.getTitle().toUpperCase());
             }
-            if (currentSortMode == SORT_MODE_TITLE_DESC) {
+            if (sortMode.equals(SORT_MODE_TITLE_DESC)) {
                 return getEpisdoeDetailsCallback2.getTitle().toUpperCase().compareTo(getEpisdoeDetailsCallback.getTitle().toUpperCase());
             }
-            if (currentSortMode != SORT_MODE_DATE_ADDED_DESC) {
+            if (!sortMode.equals(SORT_MODE_DATE_ADDED)) {
                 return 0;
             }
             return getEpisdoeDetailsCallback2.getAdded().toUpperCase().compareTo(getEpisdoeDetailsCallback.getAdded().toUpperCase());

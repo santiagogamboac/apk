@@ -20,22 +20,25 @@ public class SharepreferenceDBHandler {
      * recognizable real library) - the CLASS IDENTITY (real name/package) is unrecoverable per
      * design spec 7.1 policy 2, but JADX decompiled the whole APK, so the actual field value is
      * sitting right there in recovery/jadx-out/sources/J7/AbstractC0842a.java:335
-     * ("f7802D = \"IPTVSort\";" in the class's static initializer). Used as EVERY
-     * SharedPreferences file name in this class (~18 call sites); reconstructed once here with
-     * the real recovered value and referenced everywhere the original field was used. NOT
-     * unified with the AbstractC0842a value in LiveStreamDBHandler.java, even though JADX
-     * assigned them the same synthetic class name - per spec 7.1, these are different original
-     * fields despite the shared synthetic name.
+     * ("f7802D = \"IPTVSort\";" in the class's static initializer). Used as the SharedPreferences
+     * file name at the ~18 sites in this class that originally used AbstractC0842a.f7802D;
+     * reconstructed once here with the real recovered value and referenced at those sites. The
+     * remaining ~25 SharedPreferences call sites in this class use their own distinct literal
+     * file names and were never part of this placeholder. NOT unified with the AbstractC0842a
+     * value in LiveStreamDBHandler.java, even though JADX assigned them the same synthetic
+     * class name - per spec 7.1, these are different original fields despite the shared
+     * synthetic name.
      */
     private static final String SHARED_PREFS_FILE_NAME = "IPTVSort";
 
     /*
-     * STAGE1-PLACEHOLDER: original reference was J7.AbstractC0842a.f7872o, a Boolean from the
-     * same fully-synthetic package as above, used once (in isLocalDb) to pick which default
-     * value to pass to a "fav_db" SharedPreferences boolean read. Real semantics are unknown;
-     * defaulted to false (the safer/more conservative branch per design spec 7.1 guidance),
-     * which in this call site means "fav_db" defaults to true when absent - i.e. local-DB
-     * favourites are used by default in a class whose whole purpose is local storage.
+     * STAGE1-NOTE (verified, not a guess): original reference was J7.AbstractC0842a.f7872o, a
+     * Boolean from the same fully-synthetic package as above, used once (in isLocalDb) to pick
+     * which default value to pass to a "fav_db" SharedPreferences boolean read. The value is
+     * confirmed correct at recovery/jadx-out/sources/J7/AbstractC0842a.java:320
+     * (f7872o = Boolean.FALSE in the class's static initializer), which in this call site means
+     * "fav_db" defaults to true when absent - i.e. local-DB favourites are used by default in a
+     * class whose whole purpose is local storage.
      */
     private static final boolean FAV_DB_USE_ALT_DEFAULT = false;
 

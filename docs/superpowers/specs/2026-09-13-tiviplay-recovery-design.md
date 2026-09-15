@@ -121,7 +121,7 @@ pequeño de clases por etapa, en vez de enfrentar 2,000 archivos rotos a la vez.
 Activity → método de `RetrofitPost` (Retrofit) → respuesta deserializada directamente a un
 `XxxCallback` (a pesar del nombre, son POJOs planos de Gson — NO implementan
 `retrofit2.Callback` ni contienen lógica propia; corregido en la Etapa 1 tras ver el código
-decompilado real, ver §7.2 y `SRS_TiviPlay.md` §3.14) → parseo a POJO anidado (Gson) →
+decompilado real, ver `SRS_TiviPlay.md` §3.14) → parseo a POJO anidado (Gson) →
 persistencia en SQLite (`*DBHandler`) o `SharedPreferences` (blobs JSON vía Gson) o
 actualización de singletons en memoria para listas grandes → la UI lee directamente de esas
 fuentes (no hay `ViewModel`/`LiveData` en el original; se mantiene el patrón tal cual durante
@@ -201,7 +201,8 @@ arreglo real, no solo que "ya compila":
 - **`LiveStreamDBHandler.getAllLiveStreasWithCategoryId` y `getAllSeriesStreamsWithCategoryId`
   devuelven `null`/lista vacía para la mayoría de los IDs de categoría reales**, no solo un
   camino residual raro. La reconstrucción de JADX dejó el código que arma la consulta SQL
-  (`str7`/`string` en cada método) ubicado DESPUÉS del único punto donde se usa para
+  (`str7`/`string` en `getAllLiveStreasWithCategoryId`, `str3` en
+  `getAllSeriesStreamsWithCategoryId`) ubicado DESPUÉS del único punto donde se usa para
   `rawQuery(...)`, un defecto de reordenamiento del bloque "duplicado" que JADX no pudo
   reconciliar (ver Etapa 1, Task 3). No es un problema introducido por la recuperación: el
   código decompilado tal cual no compila sin alguna intervención, y el arreglo mínimo
@@ -269,7 +270,7 @@ comandos se puede hacer sin él, pero la experiencia completa de desarrollo la r
 
 - 2026-09-14: Stage 1 (data layer: model/pojo, model/callback,
   model/SbpCombinedResponse, model/database, model/webrequest, plus 11
-  sbpfunction response classes RetrofitPost needs) complete. 175 files
+  sbpfunction response classes RetrofitPost needs) complete. 180 files
   recovered from JADX decompilation, all compile cleanly. Verified via a
   temporary check in SplashActivity (reverted after use): DatabaseHandler
   opens a writable SQLite database, and RetrofitPost's Retrofit interface

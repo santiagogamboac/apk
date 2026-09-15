@@ -262,3 +262,15 @@ comandos se puede hacer sin él, pero la experiencia completa de desarrollo la r
 ## Progress log
 
 - 2026-09-14: Stage 0 (compiling, installable skeleton) complete. `assembleDebug` succeeds, `SplashActivity` stub installs and launches without crashing. Minor fix applied: the original app never declared a Google Mobile Ads (AdMob) `APPLICATION_ID` meta-data at all (confirmed: zero occurrences in the un-pruned original manifest backup) - it only had `AD_MANAGER_APP=true`, consistent with predating play-services-ads 17.0.0's enforcement of this field. Added a synthetic Stage-0 placeholder `APPLICATION_ID` (Google's public AdMob test ID: ca-app-pub-3940256099942544~3347511713) to AndroidManifest.xml to prevent initialization failure with the current, much newer play-services-ads dependency - this is a new addition, not something restored from the original app. No proprietary logic recovered yet - see the Stage 1 plan for the data layer.
+
+- 2026-09-14: Stage 1 (data layer: model/pojo, model/callback,
+  model/SbpCombinedResponse, model/database, model/webrequest, plus 11
+  sbpfunction response classes RetrofitPost needs) complete. 175 files
+  recovered from JADX decompilation, all compile cleanly. Verified via a
+  temporary check in SplashActivity (reverted after use): DatabaseHandler
+  opens a writable SQLite database, and RetrofitPost's Retrofit interface
+  builds and issues a real HTTP call that fails only at the network layer
+  (no test server available), proving the interface/serialization wiring
+  itself is correct. assembleDebug still succeeds and the app still
+  installs and launches without crashing. No UI/business logic recovered
+  yet — see the Stage 2 plan for auth/onboarding.

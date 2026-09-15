@@ -40,36 +40,40 @@ import java.util.Map;
 /* JADX INFO: loaded from: classes3.dex */
 public class LiveStreamDBHandler extends SQLiteOpenHelper {
     /*
-     * STAGE1-PLACEHOLDER: original references were J7.STAGE1_PLACEHOLDER_J7_F7868M (Boolean, used in
-     * 3 "if" conditions gating which SQL WHERE-clause shape to use) and J7.z (a static-utility
-     * class from the same fully-synthetic R8 package, used for a "bulk write in progress"
-     * boolean flag, a safe-string-to-int helper, a "current date" string helper, and two
-     * AsyncTask cancellation-token fields).
-     * Neither J7 package is a recognizable real library - per design spec 7.1 policy 2,
-     * treated as unrecoverable and reconstructed here as local fields/methods scoped to
-     * exactly what this file uses. NOT unified with the AbstractC0842a placeholder in
-     * SharepreferenceDBHandler.java even though JADX assigned the same synthetic class name.
+     * STAGE1-NOTE (not a guessed placeholder - see fix-round correction below): original
+     * references were J7.AbstractC0842a.f7868m (Boolean) and J7.z (a static-utility class from
+     * the same fully-synthetic R8 package - unrelated to AbstractC0842a, just dumped into the
+     * same synthetic package by R8's repackaging - used for a "bulk write in progress" boolean
+     * flag, a safe-string-to-int helper, a "current date" string helper, and two AsyncTask
+     * cancellation-token fields). Neither J7 package is a recognizable real library, so the
+     * CLASS IDENTITY (real name/package) is unrecoverable per design spec 7.1 policy 2 - but
+     * JADX decompiled the whole APK, so the actual field VALUES are sitting right there in
+     * recovery/jadx-out/sources/J7/AbstractC0842a.java and .../J7/z.java. Values below are read
+     * directly from that decompiled source, not guessed. Local fields kept file-scoped, NOT
+     * unified with the AbstractC0842a value in SharepreferenceDBHandler.java even though JADX
+     * assigned the same synthetic class name to both (different original fields, per spec 7.1).
      *
-     * f7868m default: false. All 3 call sites (getLiveStreamFavouriteRow, getM3UFavouriteRow,
-     * getM3UFavouriteRowSeries) choose between a "url_fire_db"-keyed query (true branch) and a
-     * "categoryID + url"-keyed query (false branch); false selects the more specific/filtered
-     * query, which reads as the "normal" path and is treated as the safer default.
+     * f7868m: recovered from recovery/jadx-out/sources/J7/AbstractC0842a.java:318
+     * ("f7868m = true;" in the class's static initializer) - true, not a guess. All 3 call
+     * sites (getLiveStreamFavouriteRow, getM3UFavouriteRow, getM3UFavouriteRowSeries) resolve
+     * to the "url_fire_db"-keyed query branch.
      */
-    private static final boolean STAGE1_PLACEHOLDER_J7_F7868M = false;
+    private static final boolean STAGE1_RECOVERED_J7_F7868M = true;
 
-    /* STAGE1-PLACEHOLDER (see above): J7.stage1PlaceholderJ7ZBulkWriteFlag - a static boolean only ever written (never
+    /* STAGE1-PLACEHOLDER (see above): J7.z.f8107r - a static boolean only ever written (never
      * read) in this file, toggled true/false around bulk-insert loops; likely a cross-class
-     * "bulk write in progress" signal read elsewhere. Default false. */
+     * "bulk write in progress" signal read elsewhere. Confirmed via the decompiled J7/z.java
+     * source that this field has no other consumer within this file's scope; default false. */
     private static boolean stage1PlaceholderJ7ZBulkWriteFlag = false;
 
-    /* STAGE1-PLACEHOLDER (see above): J7.stage1PlaceholderJ7ZTaskToken1 and J7.stage1PlaceholderJ7ZTaskToken2 - two distinct static
+    /* STAGE1-PLACEHOLDER (see above): J7.z.f8103n and J7.z.f8106q - two distinct static
      * AsyncTask fields, only ever read (never assigned) in this file, used as cancellation
      * tokens to break out of long cursor-iteration loops early. Kept as two distinct fields
      * since the original used two distinct names; both default null (never cancelled). */
     private static AsyncTask stage1PlaceholderJ7ZTaskToken1 = null;
     private static AsyncTask stage1PlaceholderJ7ZTaskToken2 = null;
 
-    /* STAGE1-PLACEHOLDER (see above): J7.stage1PlaceholderJ7ZSafeParseInt(String) - a static helper that safely converts a
+    /* STAGE1-PLACEHOLDER (see above): J7.z.a0(String) - a static helper that safely converts a
      * cursor String column value to an int, used to populate int setters (setLiveStreamCounter,
      * setIdAuto, setseriesID) from raw cursor Strings. Reconstructed as a safe parse returning
      * 0 on failure, matching the call-site usage pattern. */
@@ -81,24 +85,35 @@ public class LiveStreamDBHandler extends SQLiteOpenHelper {
         }
     }
 
-    /* STAGE1-PLACEHOLDER (see above): J7.z.j() - a static, no-arg method from the same
-     * fully-synthetic package, used twice (both in updateImportStatus overloads) to populate a
-     * "date" column (KEY_DATE_IMPORT_STATUS = "date") alongside a separately-captured
-     * System.currentTimeMillis() timestamp column, so it reads as a human-readable "current
-     * date" string rather than a raw timestamp. Real format is unknown; reconstructed as a
-     * plain ISO-like yyyy-MM-dd string, a safe/common choice for a "date" column. */
+    /*
+     * STAGE1-NOTE (not a guessed placeholder - see fix-round correction below): J7.z.j() -
+     * recovered from the decompiled source, not guessed. recovery/jadx-out/sources/J7/z.java:1506
+     * shows "public static String j() { return Y(Calendar.getInstance().getTime().toString()); }",
+     * and Y(String) at line 1114 formats with "dd/MM/yyyy" (round-tripped through a Date.toString()
+     * parse/reformat that is equivalent, for this purpose, to formatting the current date
+     * directly). Used twice (both updateImportStatus overloads) to populate a "date" column
+     * (KEY_DATE_IMPORT_STATUS = "date") alongside a separately-captured
+     * System.currentTimeMillis() timestamp column.
+     */
     private static String stage1PlaceholderJ7ZCurrentDateString() {
-        return new java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.US).format(new java.util.Date());
+        return new java.text.SimpleDateFormat("dd/MM/yyyy", java.util.Locale.US).format(java.util.Calendar.getInstance().getTime());
     }
 
     /*
-     * STAGE1-PLACEHOLDER: original reference was R7.a, a class from a fully-synthetic R8
-     * package (no recognizable real library) instantiated with a Context and used only via two
-     * no-arg int-returning methods (q(), r()) whose results feed SQL "LIMIT n" clauses - i.e. a
-     * small local "row limit" config/settings helper. Per design spec 7.1 policy 2, treated as
-     * unrecoverable and reconstructed as a minimal local placeholder scoped to exactly this
-     * usage. The limit values are unknown; 50 is used as a plausible, harmless default for a
-     * "how many recent rows to keep" style limit.
+     * STAGE1-NOTE (not a guessed placeholder - see fix-round correction below): original
+     * reference was R7.a, a class from a fully-synthetic R8 package (no recognizable real
+     * library) instantiated with a Context and used only via two no-arg int-returning methods
+     * (q(), r()) whose results feed SQL "LIMIT n" clauses. The CLASS IDENTITY is unrecoverable
+     * per spec 7.1 policy 2, but its full decompiled source is at
+     * recovery/jadx-out/sources/R7/a.java, so the real method bodies were read directly rather
+     * than guessed: q() (line ~181) is "this.f13881f.getInt(\"recently_added_limit\",
+     * AbstractC0842a.f7861i0)" where f7861i0 = 30 (recovery/jadx-out/sources/J7/AbstractC0842a.java:365),
+     * and r() (line ~185) is "this.f13881f.getInt(\"recently_watched_limit_live\",
+     * AbstractC0842a.f7863j0)" where f7863j0 = 10 (AbstractC0842a.java:366). f13881f is
+     * initialized in R7/a.java's constructor (lines 66-67 and 74, redundantly) as
+     * "context.getApplicationContext().getSharedPreferences(\"auto_start\", 0)" - a real,
+     * recovered SharedPreferences file name, not a guess. Reconstructed here using the Context
+     * this placeholder already carries, with the exact same file name, keys and defaults.
      */
     private static final class Stage1PlaceholderR7A {
         private final Context context;
@@ -108,11 +123,11 @@ public class LiveStreamDBHandler extends SQLiteOpenHelper {
         }
 
         int q() {
-            return 50;
+            return this.context.getSharedPreferences("auto_start", 0).getInt("recently_added_limit", 30);
         }
 
         int r() {
-            return 50;
+            return this.context.getSharedPreferences("auto_start", 0).getInt("recently_watched_limit_live", 10);
         }
     }
 
@@ -7026,7 +7041,7 @@ public class LiveStreamDBHandler extends SQLiteOpenHelper {
         int userID = SharepreferenceDBHandler.getUserID(this.context);
         new ArrayList();
         String currentAPPType = SharepreferenceDBHandler.getCurrentAPPType(this.context);
-        if (STAGE1_PLACEHOLDER_J7_F7868M) {
+        if (STAGE1_RECOVERED_J7_F7868M) {
             if (str4.equalsIgnoreCase("radio_streams") || str4.equalsIgnoreCase(KEY_AVAIL_CHANNEL_LIVE)) {
                 if (currentAPPType.equals("onestream_api")) {
                     str5 = "SELECT  * FROM onestream_iptv_live_streams WHERE stream_type LIKE '%" + str4 + "%' AND " + KEY_USER_ID + " = '" + userID + "' AND " + KEY_STREAM_ID + "='" + str2 + "' LIMIT 1";
@@ -7133,7 +7148,7 @@ public class LiveStreamDBHandler extends SQLiteOpenHelper {
         String str4;
         ArrayList<LiveStreamsDBModel> arrayList = new ArrayList<>();
         int userID = SharepreferenceDBHandler.getUserID(this.context);
-        if (STAGE1_PLACEHOLDER_J7_F7868M) {
+        if (STAGE1_RECOVERED_J7_F7868M) {
             str4 = "SELECT  * FROM iptv_live_streams_m3u WHERE url_fire_db='" + str2 + "' AND " + KEY_USER_ID + "='" + userID + "'";
         } else {
             str4 = "SELECT  * FROM iptv_live_streams_m3u WHERE categoryID='" + str + "' AND " + "url" + "='" + str2 + "' AND " + KEY_USER_ID + "='" + userID + "'";
@@ -7179,7 +7194,7 @@ public class LiveStreamDBHandler extends SQLiteOpenHelper {
     public SeriesDBModel getM3UFavouriteRowSeries(String str, String str2, String str3) {
         String str4;
         int userID = SharepreferenceDBHandler.getUserID(this.context);
-        if (STAGE1_PLACEHOLDER_J7_F7868M) {
+        if (STAGE1_RECOVERED_J7_F7868M) {
             str4 = "SELECT  * FROM iptv_live_streams_m3u WHERE url_fire_db='" + str2 + "' AND " + KEY_USER_ID + "='" + userID + "'";
         } else {
             str4 = "SELECT  * FROM iptv_live_streams_m3u WHERE categoryID='" + str + "' AND " + "url" + "='" + str2 + "' AND " + KEY_USER_ID + "='" + userID + "'";

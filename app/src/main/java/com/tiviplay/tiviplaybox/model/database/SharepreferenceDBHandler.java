@@ -15,17 +15,19 @@ import java.util.Map;
 /* JADX INFO: loaded from: classes3.dex */
 public class SharepreferenceDBHandler {
     /*
-     * STAGE1-PLACEHOLDER: original reference was J7.AbstractC0842a.f7802D, a String constant
-     * from a fully-synthetic R8 package (no recognizable real library) - per design spec 7.1
-     * policy 2, treated as unrecoverable. It was used as EVERY SharedPreferences file name in
-     * this class (~18 call sites), so it is clearly the app's shared-preferences file name
-     * constant; reconstructed once here as a stable, recognizable literal and referenced
-     * everywhere the original field was used. NOT unified with the AbstractC0842a placeholder
-     * in LiveStreamDBHandler.java, even though JADX assigned them the same synthetic class
-     * name - per policy, placeholders are not shared across files without real evidence they
-     * were the same original field.
+     * STAGE1-NOTE (not a guessed placeholder - see fix-round correction): original reference
+     * was J7.AbstractC0842a.f7802D, a String constant from a fully-synthetic R8 package (no
+     * recognizable real library) - the CLASS IDENTITY (real name/package) is unrecoverable per
+     * design spec 7.1 policy 2, but JADX decompiled the whole APK, so the actual field value is
+     * sitting right there in recovery/jadx-out/sources/J7/AbstractC0842a.java:335
+     * ("f7802D = \"IPTVSort\";" in the class's static initializer). Used as EVERY
+     * SharedPreferences file name in this class (~18 call sites); reconstructed once here with
+     * the real recovered value and referenced everywhere the original field was used. NOT
+     * unified with the AbstractC0842a value in LiveStreamDBHandler.java, even though JADX
+     * assigned them the same synthetic class name - per spec 7.1, these are different original
+     * fields despite the shared synthetic name.
      */
-    private static final String SHARED_PREFS_FILE_NAME = "com.tiviplay.tiviplaybox_preferences";
+    private static final String SHARED_PREFS_FILE_NAME = "IPTVSort";
 
     /*
      * STAGE1-PLACEHOLDER: original reference was J7.AbstractC0842a.f7872o, a Boolean from the
